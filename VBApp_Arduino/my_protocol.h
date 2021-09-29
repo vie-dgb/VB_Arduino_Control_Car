@@ -44,6 +44,7 @@ typedef enum
 
 /* Declare data */
 DataPackage rxDataPack;
+
 /* Data pack encoded */
 CmdPack cmdData;
 

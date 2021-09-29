@@ -11,14 +11,19 @@
 #ifndef LED_EFFECT_H
 #define LED_EFFECT_H
 
+/* counter use for all effects */
 static uint8_t  led_cnt_mode = 0;
 
+/*------------------------Declare function------------------------*/
 void led_effect_clear_cnt(void);
 uint8_t led_effect_1(uint8_t byte_effect);
 uint8_t led_effect_2(uint8_t byte_effect);
 uint8_t led_effect_3(uint8_t byte_effect);
 uint8_t led_effect_4();
 uint8_t led_effect_5();
+
+
+/*-----------------------function implement-----------------------*/
 
 void led_effect_clear_cnt()
 {
