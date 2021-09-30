@@ -15,8 +15,11 @@
 #include <Wire.h>
 #include "led_effect.h"
 
+#define proteus_simu_addr 0x20
+#define lcd_addr 0x20
+
 /* init led variables */
-static LiquidCrystal_I2C lcd_print(0x27,16,4);
+static LiquidCrystal_I2C lcd_print(proteus_simu_addr,16,4);
 /* lcd custom char on led and off led */
 uint8_t led_off[8]  = {0xff,0x00,0x00,0x00,0x00,0x00,0xff};
 uint8_t led_on[8]  = {0xff,0xff,0xff,0xff,0xff,0xff,0xff};

@@ -10,16 +10,20 @@
 
 #include <Wire.h>
 #include "my_protocol.h"
+#include "stepper_mode.h"
 
 uint32_t timeLedLoop = 0;
 
 /* main setup function */
 void setup() {
     /* init my protocol */
-    my_protocol_init(115200);
+    my_protocol_init(9600);
     /* init led */
     led_init();
     led_init_lcd();
+    /* init stepper */
+    stepper_init(4,5,6,7,300);
+
     timeLedLoop = millis();
 }
 
@@ -31,9 +35,10 @@ void loop() {
     my_protocol_decode();
     /* handle led mode */
     led_handle();
-
+    /* handle step motor */
+    stepper_handle();
     /* check my code delay? */
-    if(millis()-timeLedLoop>=250)
+    if(millis()-timeLedLoop>=200)
     {
         digitalWrite(13,!digitalRead(13));
         timeLedLoop = millis();

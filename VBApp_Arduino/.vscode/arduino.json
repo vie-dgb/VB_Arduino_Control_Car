@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=16MHzatmega328",
     "board": "arduino:avr:pro",
-    "sketch": "VBApp.ino",
+    "sketch": "VBApp_Arduino.ino",
     "port": "COM6"
 }

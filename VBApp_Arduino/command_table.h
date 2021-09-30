@@ -14,6 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "led_mode.h"
+#include "stepper_mode.h"
 
 /* declare enum command */
 typedef enum
@@ -22,6 +23,9 @@ typedef enum
     CMD_SLT,
     CMD_SLS,
     CMD_SLR,
+    CMD_SSR,
+    CMD_SSD,
+    CMD_SST,
     CMD_NON,
 }command_e;
 
@@ -36,10 +40,15 @@ typedef struct
 /* declare command table */
 const command_entry_t cmd_table[] = 
 {   
+    /* led command */
     {"SLE", "Set effect of led.", CMD_SLE},
     {"SLS", "Set led data but none effect.", CMD_SLS},
 	{"SLT", "Set timer of led.", CMD_SLT},
     {"SLR", "Set led response.", CMD_SLR},
+    /* stepper command */
+    {"SSR", "Set stepper run or stop.", CMD_SSR},
+    {"SSD", "Set step direction.", CMD_SSD},
+    {"SST", "Set step time delay.", CMD_SST},
     {NULL, "Not found command.", CMD_NON}
 };
 
@@ -95,6 +104,21 @@ void command_excute(char *pCmd, char *argv_1)
             int repState = atoi(argv_1);
             led_reps(repState);
             //Serial.println(cmd_table[3].Help);
+            break;
+        }
+        case CMD_SSR:{
+            int _stepState = atoi(argv_1);
+            stepper_Stop(_stepState);
+            break;
+        }
+        case CMD_SSD:{
+            int _DirState = atoi(argv_1);
+            stepper_SetDir(_DirState);
+            break;
+        }
+        case CMD_SST:{
+            int _DelayTime = atoi(argv_1);
+            stepper_SetTimeDelay(_DelayTime);
             break;
         }
         case CMD_NON:{
