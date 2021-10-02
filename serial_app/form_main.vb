@@ -145,8 +145,8 @@ Public Class form_main
     'envent send button in tab 1
     Private Sub btn_tab1_send_Click(sender As Object, e As EventArgs) Handles btn_tab1_send.Click
         checkbit(dataByte)
-        update_led(dataByte)
-        update_textbox(dataByte)
+        'update_led(dataByte)
+        'update_textbox(dataByte)
         If dataByte = &H_73 Or dataByte = &H_74 Then
             _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_53, &H_65, dataByte, &H_74}, 0, 7)
         ElseIf dataByte = &H_65 Then
@@ -501,9 +501,16 @@ Public Class form_main
             'check command
             Dim checkCommand As String = System.Text.Encoding.ASCII.GetString(buffTemp, 1, 3)
             If checkCommand = "REP" Then
-                update_led(buffTemp(4))
-                update_textbox(buffTemp(4))
-                update_bit(buffTemp(4))
+                If buffTemp(4) = &H_74 Or buffTemp(4) = &H_73 Or buffTemp(4) = &H_65 Then
+                    update_led(buffTemp(5))
+                    update_textbox(buffTemp(5))
+                    update_bit(buffTemp(5))
+                Else
+                    update_led(buffTemp(4))
+                    update_textbox(buffTemp(4))
+                    update_bit(buffTemp(4))
+                End If
+
             ElseIf checkCommand = "RSS" Then
                 If buffTemp(4) = &H_31 Then
                     lb_step_run.Text = "ON"

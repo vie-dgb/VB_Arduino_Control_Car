@@ -123,6 +123,7 @@ void led_setSingle(char byteled)
 {
   led_byte = byteled;
   led_update(led_byte);
+  led_reps_excute(byteled);
   lcd_print.setCursor(0,0);
   lcd_print.print("LED data: ");
   byte2hex(&led_byte);
