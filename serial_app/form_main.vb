@@ -76,13 +76,12 @@ Public Class form_main
         _port_parity = IO.Ports.Parity.None
         _port_data_size = "8"
         tbx_tab2_timeDelay.Text = Val(trkbar_timeDelay.Value)
+        tbx_tab4_timeStepper.Text = Val(trkbar_timeStepper.Value)
         cbb_effect_led.SelectedIndex() = 0
         update_status_line()
-        btn_tab1_send.Enabled = False
-        btn_tab1_clear.Enabled = False
-        btn_tab2_effect.Enabled = False
-        tbx_tab2_maxDelay.Text = trkbar_timeDelay.Maximum
-        tbx_tab2_minDelay.Text = trkbar_timeDelay.Minimum
+        btnEnableControl(False)
+
+        DateTimePicker_tab5.
     End Sub
 
     'event of item baud inner click
@@ -130,7 +129,14 @@ Public Class form_main
         checkbit(dataByte)
         update_led(dataByte)
         update_textbox(dataByte)
-        serial_write_byte(dataByte)
+        If dataByte = &H_73 Or dataByte = &H_74 Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_53, &H_65, dataByte, &H_74}, 0, 7)
+        ElseIf dataByte = &H_65 Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_53, &H_65, &H_64, &H_74}, 0, 7)
+        Else
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_53, dataByte, &H_74}, 0, 6)
+        End If
+
     End Sub
 
     'envent clear button in tab 1
@@ -139,7 +145,7 @@ Public Class form_main
         update_bit(dataByte)
         update_led(dataByte)
         update_textbox(dataByte)
-        serial_write_byte(dataByte)
+        _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_53, dataByte, &H_74}, 0, 6)
     End Sub
 
     'event run/stop effect in tab 2
@@ -147,6 +153,13 @@ Public Class form_main
         Dim abc As Byte = Convert.ToByte(cbb_effect_led.SelectedIndex) + &H_30
         Dim arr_effect() As Byte = New Byte() {&H_73, &H_53, &H_4C, &H_45, abc, &H_74}
         _SerialPort.Write(arr_effect, 0, 6)
+
+        'response state
+        If chb_tab2_respState.Checked = True Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_52, &H_31, &H_74}, 0, 6)
+        Else
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_52, &H_30, &H_74}, 0, 6)
+        End If
     End Sub
 
     'event scroll bar of scroll bar delay(tab 2)
@@ -154,28 +167,23 @@ Public Class form_main
         tbx_tab2_timeDelay.Text = trkbar_timeDelay.Value
     End Sub
 
-    'event textbox change of text box delay(tab 2)
-    Private Sub tbx_tab2_timeDelay_TextChanged(sender As Object, e As EventArgs) Handles tbx_tab2_timeDelay.TextChanged
-        trkbar_timeDelay.Value = Val(tbx_tab2_timeDelay.Text)
-    End Sub
+    'event press enter of text box delay(tab 2)
+    Private Sub tbx_tab2_timeDelay_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab2_timeDelay.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            If Val(tbx_tab2_timeDelay.Text) >= 100 And Val(tbx_tab2_timeDelay.Text) <= 5000 Then
+                Dim tempTimeDelay() As Byte = New Byte() {}
+                tempTimeDelay = System.Text.Encoding.ASCII.GetBytes(tbx_tab2_timeDelay.Text)
+                _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_54}, 0, 4)
+                _SerialPort.Write(tempTimeDelay, 0, tempTimeDelay.Count)
+                _SerialPort.Write(New Byte() {&H_74}, 0, 1)
 
-    'event textbox change of time delay(tab 2)
-    Private Sub tbx_tab2_minDelay_TextChanged(sender As Object, e As EventArgs) Handles tbx_tab2_minDelay.TextChanged
-        If (trkbar_timeDelay.Value - Val(tbx_tab2_minDelay.Text)) < 10 Or (Val(tbx_tab2_minDelay.Text) < 0) Then
-            MsgBox("Error", vbOKOnly + vbInformation, "Noti")
-        Else
-            trkbar_timeDelay.Minimum = Val(tbx_tab2_minDelay.Text)
+                trkbar_timeDelay.Value = Val(tbx_tab2_timeDelay.Text)
+            End If
         End If
-    End Sub
 
-    'event textbox change of time delay(tab 2)
-    Private Sub tbx_tab2_maxDelay_TextChanged(sender As Object, e As EventArgs) Handles tbx_tab2_maxDelay.TextChanged
-        If (Val(tbx_tab2_maxDelay.Text) > 5000) Or (Len(tbx_tab2_maxDelay.Text) < 0) Then
-            MsgBox("Error", vbOKOnly + vbInformation, "Noti")
-        Else
-            trkbar_timeDelay.Maximum = Val(tbx_tab2_maxDelay.Text)
-            trkbar_timeDelay.Value = trkbar_timeDelay.Maximum / 2
-            tbx_tab2_timeDelay.Text = trkbar_timeDelay.Value
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
         End If
     End Sub
 
@@ -206,9 +214,7 @@ Public Class form_main
                 _SerialPort.Open()
                 MsgConnect = "Connect successfully."
                 tstr_connect.Text = "Connected"
-                btn_tab1_send.Enabled = True
-                btn_tab1_clear.Enabled = True
-                btn_tab2_effect.Enabled = True
+                btnEnableControl(True)
             Catch ex As Exception
                 MsgConnect = "COM Port used or not found, select another port."
             End Try
@@ -216,10 +222,95 @@ Public Class form_main
         Else
             _SerialPort.Close()
             tstr_connect.Text = "Disconnected"
-            btn_tab1_send.Enabled = False
-            btn_tab1_clear.Enabled = False
-            btn_tab2_effect.Enabled = False
+            btnEnableControl(False)
         End If
+    End Sub
+
+    'event press enter in command line text box
+    Private Sub tbx_tab3_writeCli_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab3_writeCli.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            Dim tempWriteCli() As Byte = New Byte() {}
+            tempWriteCli = System.Text.Encoding.ASCII.GetBytes(tbx_tab3_writeCli.Text)
+            _SerialPort.Write(New Byte() {&H_73}, 0, 1)
+            _SerialPort.Write(tempWriteCli, 0, tempWriteCli.Count)
+            _SerialPort.Write(New Byte() {&H_74}, 0, 1)
+        End If
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    'event click clear command line textbox button
+    Private Sub btn_tab3_clear_Click(sender As Object, e As EventArgs) Handles btn_tab3_clear.Click
+        rtbx_tab3_readAscii.Clear()
+        rtbx_tab3_readHex.Clear()
+    End Sub
+
+    'event click run step button
+    Private Sub btn_tab4_RunStep_Click(sender As Object, e As EventArgs) Handles btn_tab4_RunStep.Click
+        If btn_tab4_RunStep.Text = "Run Step" Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_52, &H_31, &H_74}, 0, 6)
+            btn_tab4_RunStep.Text = "Stop Step"
+        Else
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_52, &H_30, &H_74}, 0, 6)
+            btn_tab4_RunStep.Text = "Run Step"
+        End If
+    End Sub
+
+    'event click reverse direction button
+    Private Sub btn_tab4_ReDir_Click(sender As Object, e As EventArgs) Handles btn_tab4_ReDir.Click
+        If lb_step_dir.Text = "CW" Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_44, &H_30, &H_74}, 0, 6)
+            'lb_stepperDir.Text = "CCW"
+        ElseIf lb_step_dir.Text = "CCW" Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_44, &H_31, &H_74}, 0, 6)
+            'lb_stepperDir.Text = "CW"
+        End If
+    End Sub
+
+    'event click check stepper run or stop button
+    Private Sub btn_tab4_UpStaStep_Click(sender As Object, e As EventArgs) Handles btn_tab4_UpStaStep.Click
+        _SerialPort.Write(New Byte() {&H_73, &H_47, &H_53, &H_53, &H_74}, 0, 5)
+    End Sub
+
+    'event click check stepper direction CW or CCW button
+    Private Sub btn_tab4_UpDirStep_Click(sender As Object, e As EventArgs) Handles btn_tab4_UpDirStep.Click
+        _SerialPort.Write(New Byte() {&H_73, &H_47, &H_53, &H_44, &H_74}, 0, 5)
+    End Sub
+
+    'event checked change response or not response state of led
+    Private Sub chb_tab2_respState_CheckedChanged(sender As Object, e As EventArgs) Handles chb_tab2_respState.CheckedChanged
+        If chb_tab2_respState.Checked = True Then
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_52, &H_31, &H_74}, 0, 6)
+        Else
+            _SerialPort.Write(New Byte() {&H_73, &H_53, &H_4C, &H_52, &H_30, &H_74}, 0, 6)
+        End If
+    End Sub
+
+    'event press enter of text box delay(tab 4)
+    Private Sub tbx_tab4_timeStepper_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab4_timeStepper.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            If Val(tbx_tab4_timeStepper.Text) >= 100 And Val(tbx_tab4_timeStepper.Text) <= 1000 Then
+                Dim tempStepDelay() As Byte = New Byte() {}
+                tempStepDelay = System.Text.Encoding.ASCII.GetBytes(tbx_tab4_timeStepper.Text)
+                _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_54}, 0, 4)
+                _SerialPort.Write(tempStepDelay, 0, tempStepDelay.Count)
+                _SerialPort.Write(New Byte() {&H_74}, 0, 1)
+
+                trkbar_timeStepper.Value = Val(tbx_tab4_timeStepper.Text)
+            End If
+        End If
+
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    'event scroll bar of scroll bar delay(tab 4)
+    Private Sub trkbar_timeStepper_Scroll(sender As Object, e As ScrollEventArgs) Handles trkbar_timeStepper.Scroll
+        tbx_tab4_timeStepper.Text = trkbar_timeStepper.Value
     End Sub
 
     'update status line function
@@ -288,9 +379,9 @@ Public Class form_main
     End Sub
 
     'serial write byte function
-    Sub serial_write_byte(ByVal byteSend As Byte)
-        _SerialPort.Write(New Byte() {byteSend}, 0, 1)
-    End Sub
+    'Sub serial_write_byte(ByVal byteSend As Byte)
+    '    _SerialPort.Write(New Byte() {byteSend}, 0, 1)
+    'End Sub
 
     'sort name COM port
     Public Sub sortCOMPortList(ByRef comList As ArrayList)
@@ -309,6 +400,17 @@ Public Class form_main
         comList = tempPortList
     End Sub
 
+    'control button enable or disable
+    Public Sub btnEnableControl(statement As Boolean)
+        btn_tab1_send.Enabled = statement
+        btn_tab1_clear.Enabled = statement
+        btn_tab2_effect.Enabled = statement
+        btn_tab4_RunStep.Enabled = statement
+        btn_tab4_UpStaStep.Enabled = statement
+        btn_tab4_ReDir.Enabled = statement
+        btn_tab4_UpDirStep.Enabled = statement
+        chb_tab2_respState.Enabled = statement
+    End Sub
 
     '---------------Serial receive data-------------------------'
     Private Delegate Sub SerialDelegate(ByVal Buffer() As Byte)
@@ -366,6 +468,10 @@ Public Class form_main
             Next
             rtbx_tab3_readHex.AppendText(Environment.NewLine & printTempStr)
             rtbx_tab3_readAscii.AppendText(Environment.NewLine & System.Text.Encoding.ASCII.GetString(buffTemp, 0, buffIndex))
+            If chb_tab3_autoScroll.Checked = True Then
+                rtbx_tab3_readHex.ScrollToCaret()
+                rtbx_tab3_readAscii.ScrollToCaret()
+            End If
 
             'check command
             Dim checkCommand As String = System.Text.Encoding.ASCII.GetString(buffTemp, 1, 3)
@@ -373,6 +479,20 @@ Public Class form_main
                 update_led(buffTemp(4))
                 update_textbox(buffTemp(4))
                 update_bit(buffTemp(4))
+            ElseIf checkCommand = "RSS" Then
+                If buffTemp(4) = &H_31 Then
+                    lb_step_run.Text = "ON"
+                    rectan_Stepper_state.FillColor = Color.Red
+                ElseIf buffTemp(4) = &H_30 Then
+                    lb_step_run.Text = "OFF"
+                    rectan_Stepper_state.FillColor = Color.Gray
+                End If
+            ElseIf checkCommand = "RSD" Then
+                If buffTemp(4) = &H_31 Then
+                    lb_step_dir.Text = "CW"
+                ElseIf buffTemp(4) = &H_30 Then
+                    lb_step_dir.Text = "CCW"
+                End If
             End If
             rxFlagEnd = False
         End If

@@ -97,6 +97,7 @@ void my_protocol_poll()
             rxDataPack.data[rxIndex] = '\0';
             rxState = STATE_IDLE;
             rxFlagEnd = true;
+            //Serial.write(rxDataPack.data,rxDataPack.len);
             break;
         }
         else if((rx_byte == START_BYTE)&&(lst_rx_byte != ESC_BYTE))
@@ -110,6 +111,7 @@ void my_protocol_poll()
         {
             rxDataPack.data[rxIndex++] = rx_byte;
             lst_rx_byte = rx_byte;
+            //Serial.write(rxDataPack.data[rxIndex-1]);
         }
         break;
       }
@@ -129,11 +131,29 @@ void my_protocol_decode()
     {
       if(rxDataPack.data[decodeIndex] == ESC_BYTE)
       {
-          if(cmdIndex<3) cmdData.cmd[cmdIndex++] = rxDataPack.data[++decodeIndex];
+          if(cmdIndex<3) 
+          {
+            decodeIndex += 1;
+            if(rxDataPack.data[decodeIndex] == 'd')
+            {
+              cmdData.cmd[cmdIndex++] = 'e';
+            }
+            else
+            {
+              cmdData.cmd[cmdIndex++] = rxDataPack.data[decodeIndex];
+            }
+          }
           else
           {
-              cmdData.argv_1[cmdIndex-3] = rxDataPack.data[++decodeIndex];
-              cmdIndex++;
+              decodeIndex += 1;
+              if(rxDataPack.data[decodeIndex] == 'd')
+              {
+                cmdData.argv_1[argvIndex++] = 'e';
+              }
+              else
+              {
+                cmdData.argv_1[argvIndex++] = rxDataPack.data[decodeIndex];
+              }
           }            
       }
       else
@@ -141,14 +161,14 @@ void my_protocol_decode()
           if(cmdIndex<3) cmdData.cmd[cmdIndex++] = rxDataPack.data[decodeIndex];
           else            
           {
-              cmdData.argv_1[cmdIndex-3] = rxDataPack.data[decodeIndex];
-              cmdIndex++;
+              cmdData.argv_1[argvIndex++] = rxDataPack.data[decodeIndex];
+              //argvIndex++;
           }
       }
     }
     cmdData.cmd[3] = '\0';
-    cmdData.argv_1[cmdIndex-3] = '\0';
-    cmdData.argv_1_len = cmdIndex - 3;
+    cmdData.argv_1[argvIndex] = '\0';
+    cmdData.argv_1_len = argvIndex;
     command_excute(cmdData.cmd,cmdData.argv_1);
     
     /*--------------Debug serial print---------------*/

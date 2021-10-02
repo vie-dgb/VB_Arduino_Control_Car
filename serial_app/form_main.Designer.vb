@@ -23,11 +23,9 @@ Partial Class form_main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_main))
         Me.tabCtrl_main_effect = New System.Windows.Forms.TabPage()
-        Me.lb_tab2_maxDelay = New System.Windows.Forms.Label()
-        Me.tbx_tab2_maxDelay = New System.Windows.Forms.TextBox()
-        Me.lb_tab2_minDelay = New System.Windows.Forms.Label()
-        Me.tbx_tab2_minDelay = New System.Windows.Forms.TextBox()
+        Me.chb_tab2_respState = New System.Windows.Forms.CheckBox()
         Me.tbx_tab2_timeDelay = New System.Windows.Forms.TextBox()
         Me.lb_tab2_timeDelay = New System.Windows.Forms.Label()
         Me.trkbar_timeDelay = New MetroFramework.Controls.MetroTrackBar()
@@ -59,12 +57,24 @@ Partial Class form_main
         Me.chb_bit0 = New System.Windows.Forms.CheckBox()
         Me.tabCtrl_main = New System.Windows.Forms.TabControl()
         Me.tabCtrl_main_cli = New System.Windows.Forms.TabPage()
+        Me.btn_tab3_clear = New System.Windows.Forms.Button()
+        Me.chb_tab3_autoScroll = New System.Windows.Forms.CheckBox()
+        Me.rtbx_tab3_readHex = New System.Windows.Forms.RichTextBox()
         Me.lb_tab3_readCli = New System.Windows.Forms.Label()
         Me.rtbx_tab3_readAscii = New System.Windows.Forms.RichTextBox()
         Me.lb_tab3_writeCli = New System.Windows.Forms.Label()
         Me.tbx_tab3_writeCli = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.tabCtrl_main_stepCtrl = New System.Windows.Forms.TabPage()
+        Me.lb_tab4_timeStepper = New System.Windows.Forms.Label()
+        Me.tbx_tab4_timeStepper = New System.Windows.Forms.TextBox()
+        Me.btn_tab4_UpDirStep = New System.Windows.Forms.Button()
+        Me.btn_tab4_ReDir = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btn_tab4_RunStep = New System.Windows.Forms.Button()
+        Me.btn_tab4_UpStaStep = New System.Windows.Forms.Button()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.rectan_Stepper_state = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.shp_led0 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.shp_led1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.shp_led2 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
@@ -93,7 +103,13 @@ Partial Class form_main
         Me.AboutMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me._SerialPort = New System.IO.Ports.SerialPort(Me.components)
         Me.timer_effect = New System.Windows.Forms.Timer(Me.components)
-        Me.rtbx_tab3_readHex = New System.Windows.Forms.RichTextBox()
+        Me.lb_stepDirection = New System.Windows.Forms.Label()
+        Me.lb_stepState = New System.Windows.Forms.Label()
+        Me.lb_step_run = New System.Windows.Forms.Label()
+        Me.lb_step_dir = New System.Windows.Forms.Label()
+        Me.trkbar_timeStepper = New MetroFramework.Controls.MetroTrackBar()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker_tab5 = New System.Windows.Forms.DateTimePicker()
         Me.tabCtrl_main_effect.SuspendLayout()
         CType(Me.picbx_tab2_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabCtrl_main_chb.SuspendLayout()
@@ -101,15 +117,15 @@ Partial Class form_main
         Me.tabCtrl_main.SuspendLayout()
         Me.tabCtrl_main_cli.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabCtrl_main_stepCtrl.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menu_strip.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabCtrl_main_effect
         '
-        Me.tabCtrl_main_effect.Controls.Add(Me.lb_tab2_maxDelay)
-        Me.tabCtrl_main_effect.Controls.Add(Me.tbx_tab2_maxDelay)
-        Me.tabCtrl_main_effect.Controls.Add(Me.lb_tab2_minDelay)
-        Me.tabCtrl_main_effect.Controls.Add(Me.tbx_tab2_minDelay)
+        Me.tabCtrl_main_effect.Controls.Add(Me.chb_tab2_respState)
         Me.tabCtrl_main_effect.Controls.Add(Me.tbx_tab2_timeDelay)
         Me.tabCtrl_main_effect.Controls.Add(Me.lb_tab2_timeDelay)
         Me.tabCtrl_main_effect.Controls.Add(Me.trkbar_timeDelay)
@@ -125,43 +141,15 @@ Partial Class form_main
         Me.tabCtrl_main_effect.Text = "Effect mode"
         Me.tabCtrl_main_effect.UseVisualStyleBackColor = True
         '
-        'lb_tab2_maxDelay
+        'chb_tab2_respState
         '
-        Me.lb_tab2_maxDelay.AutoSize = True
-        Me.lb_tab2_maxDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab2_maxDelay.Location = New System.Drawing.Point(243, 188)
-        Me.lb_tab2_maxDelay.Name = "lb_tab2_maxDelay"
-        Me.lb_tab2_maxDelay.Size = New System.Drawing.Size(55, 20)
-        Me.lb_tab2_maxDelay.TabIndex = 28
-        Me.lb_tab2_maxDelay.Text = "Max :"
-        '
-        'tbx_tab2_maxDelay
-        '
-        Me.tbx_tab2_maxDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab2_maxDelay.Location = New System.Drawing.Point(304, 185)
-        Me.tbx_tab2_maxDelay.Name = "tbx_tab2_maxDelay"
-        Me.tbx_tab2_maxDelay.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab2_maxDelay.TabIndex = 27
-        Me.tbx_tab2_maxDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lb_tab2_minDelay
-        '
-        Me.lb_tab2_minDelay.AutoSize = True
-        Me.lb_tab2_minDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab2_minDelay.Location = New System.Drawing.Point(41, 188)
-        Me.lb_tab2_minDelay.Name = "lb_tab2_minDelay"
-        Me.lb_tab2_minDelay.Size = New System.Drawing.Size(51, 20)
-        Me.lb_tab2_minDelay.TabIndex = 26
-        Me.lb_tab2_minDelay.Text = "Min :"
-        '
-        'tbx_tab2_minDelay
-        '
-        Me.tbx_tab2_minDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab2_minDelay.Location = New System.Drawing.Point(100, 185)
-        Me.tbx_tab2_minDelay.Name = "tbx_tab2_minDelay"
-        Me.tbx_tab2_minDelay.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab2_minDelay.TabIndex = 25
-        Me.tbx_tab2_minDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.chb_tab2_respState.AutoSize = True
+        Me.chb_tab2_respState.Location = New System.Drawing.Point(266, 126)
+        Me.chb_tab2_respState.Name = "chb_tab2_respState"
+        Me.chb_tab2_respState.Size = New System.Drawing.Size(152, 21)
+        Me.chb_tab2_respState.TabIndex = 25
+        Me.chb_tab2_respState.Text = "Response led state"
+        Me.chb_tab2_respState.UseVisualStyleBackColor = True
         '
         'tbx_tab2_timeDelay
         '
@@ -185,10 +173,11 @@ Partial Class form_main
         'trkbar_timeDelay
         '
         Me.trkbar_timeDelay.BackColor = System.Drawing.Color.Transparent
-        Me.trkbar_timeDelay.Location = New System.Drawing.Point(247, 124)
+        Me.trkbar_timeDelay.Location = New System.Drawing.Point(27, 184)
         Me.trkbar_timeDelay.Maximum = 5000
+        Me.trkbar_timeDelay.Minimum = 100
         Me.trkbar_timeDelay.Name = "trkbar_timeDelay"
-        Me.trkbar_timeDelay.Size = New System.Drawing.Size(221, 23)
+        Me.trkbar_timeDelay.Size = New System.Drawing.Size(194, 23)
         Me.trkbar_timeDelay.TabIndex = 22
         Me.trkbar_timeDelay.Text = "Time Delay"
         Me.trkbar_timeDelay.Value = 2500
@@ -196,7 +185,7 @@ Partial Class form_main
         'btn_tab2_effect
         '
         Me.btn_tab2_effect.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab2_effect.Location = New System.Drawing.Point(515, 39)
+        Me.btn_tab2_effect.Location = New System.Drawing.Point(266, 39)
         Me.btn_tab2_effect.Name = "btn_tab2_effect"
         Me.btn_tab2_effect.Size = New System.Drawing.Size(102, 39)
         Me.btn_tab2_effect.TabIndex = 20
@@ -482,6 +471,8 @@ Partial Class form_main
         Me.tabCtrl_main.Controls.Add(Me.tabCtrl_main_chb)
         Me.tabCtrl_main.Controls.Add(Me.tabCtrl_main_effect)
         Me.tabCtrl_main.Controls.Add(Me.tabCtrl_main_cli)
+        Me.tabCtrl_main.Controls.Add(Me.tabCtrl_main_stepCtrl)
+        Me.tabCtrl_main.Controls.Add(Me.TabPage1)
         Me.tabCtrl_main.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.tabCtrl_main.Location = New System.Drawing.Point(0, 223)
         Me.tabCtrl_main.Multiline = True
@@ -492,6 +483,8 @@ Partial Class form_main
         '
         'tabCtrl_main_cli
         '
+        Me.tabCtrl_main_cli.Controls.Add(Me.btn_tab3_clear)
+        Me.tabCtrl_main_cli.Controls.Add(Me.chb_tab3_autoScroll)
         Me.tabCtrl_main_cli.Controls.Add(Me.rtbx_tab3_readHex)
         Me.tabCtrl_main_cli.Controls.Add(Me.lb_tab3_readCli)
         Me.tabCtrl_main_cli.Controls.Add(Me.rtbx_tab3_readAscii)
@@ -505,6 +498,33 @@ Partial Class form_main
         Me.tabCtrl_main_cli.TabIndex = 2
         Me.tabCtrl_main_cli.Text = "Command Line"
         Me.tabCtrl_main_cli.UseVisualStyleBackColor = True
+        '
+        'btn_tab3_clear
+        '
+        Me.btn_tab3_clear.Location = New System.Drawing.Point(12, 171)
+        Me.btn_tab3_clear.Name = "btn_tab3_clear"
+        Me.btn_tab3_clear.Size = New System.Drawing.Size(75, 23)
+        Me.btn_tab3_clear.TabIndex = 25
+        Me.btn_tab3_clear.Text = "Clear"
+        Me.btn_tab3_clear.UseVisualStyleBackColor = True
+        '
+        'chb_tab3_autoScroll
+        '
+        Me.chb_tab3_autoScroll.AutoSize = True
+        Me.chb_tab3_autoScroll.Location = New System.Drawing.Point(12, 125)
+        Me.chb_tab3_autoScroll.Name = "chb_tab3_autoScroll"
+        Me.chb_tab3_autoScroll.Size = New System.Drawing.Size(98, 21)
+        Me.chb_tab3_autoScroll.TabIndex = 24
+        Me.chb_tab3_autoScroll.Text = "Auto Scroll"
+        Me.chb_tab3_autoScroll.UseVisualStyleBackColor = True
+        '
+        'rtbx_tab3_readHex
+        '
+        Me.rtbx_tab3_readHex.Location = New System.Drawing.Point(355, 80)
+        Me.rtbx_tab3_readHex.Name = "rtbx_tab3_readHex"
+        Me.rtbx_tab3_readHex.Size = New System.Drawing.Size(200, 160)
+        Me.rtbx_tab3_readHex.TabIndex = 23
+        Me.rtbx_tab3_readHex.Text = ""
         '
         'lb_tab3_readCli
         '
@@ -520,7 +540,7 @@ Partial Class form_main
         '
         Me.rtbx_tab3_readAscii.Location = New System.Drawing.Point(160, 80)
         Me.rtbx_tab3_readAscii.Name = "rtbx_tab3_readAscii"
-        Me.rtbx_tab3_readAscii.Size = New System.Drawing.Size(140, 160)
+        Me.rtbx_tab3_readAscii.Size = New System.Drawing.Size(180, 160)
         Me.rtbx_tab3_readAscii.TabIndex = 21
         Me.rtbx_tab3_readAscii.Text = ""
         '
@@ -551,21 +571,116 @@ Partial Class form_main
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'tabCtrl_main_stepCtrl
+        '
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.trkbar_timeStepper)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.lb_tab4_timeStepper)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.tbx_tab4_timeStepper)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.btn_tab4_UpDirStep)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.btn_tab4_ReDir)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.PictureBox2)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.btn_tab4_RunStep)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.btn_tab4_UpStaStep)
+        Me.tabCtrl_main_stepCtrl.Location = New System.Drawing.Point(4, 25)
+        Me.tabCtrl_main_stepCtrl.Name = "tabCtrl_main_stepCtrl"
+        Me.tabCtrl_main_stepCtrl.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCtrl_main_stepCtrl.Size = New System.Drawing.Size(774, 251)
+        Me.tabCtrl_main_stepCtrl.TabIndex = 3
+        Me.tabCtrl_main_stepCtrl.Text = "Control Stepper"
+        Me.tabCtrl_main_stepCtrl.UseVisualStyleBackColor = True
+        '
+        'lb_tab4_timeStepper
+        '
+        Me.lb_tab4_timeStepper.AutoSize = True
+        Me.lb_tab4_timeStepper.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab4_timeStepper.Location = New System.Drawing.Point(96, 153)
+        Me.lb_tab4_timeStepper.Name = "lb_tab4_timeStepper"
+        Me.lb_tab4_timeStepper.Size = New System.Drawing.Size(69, 20)
+        Me.lb_tab4_timeStepper.TabIndex = 26
+        Me.lb_tab4_timeStepper.Text = "Delay :"
+        '
+        'tbx_tab4_timeStepper
+        '
+        Me.tbx_tab4_timeStepper.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab4_timeStepper.Location = New System.Drawing.Point(171, 150)
+        Me.tbx_tab4_timeStepper.Name = "tbx_tab4_timeStepper"
+        Me.tbx_tab4_timeStepper.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab4_timeStepper.TabIndex = 25
+        Me.tbx_tab4_timeStepper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btn_tab4_UpDirStep
+        '
+        Me.btn_tab4_UpDirStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_UpDirStep.Location = New System.Drawing.Point(171, 80)
+        Me.btn_tab4_UpDirStep.Name = "btn_tab4_UpDirStep"
+        Me.btn_tab4_UpDirStep.Size = New System.Drawing.Size(157, 39)
+        Me.btn_tab4_UpDirStep.TabIndex = 21
+        Me.btn_tab4_UpDirStep.Text = "State Direction"
+        Me.btn_tab4_UpDirStep.UseVisualStyleBackColor = True
+        '
+        'btn_tab4_ReDir
+        '
+        Me.btn_tab4_ReDir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_ReDir.Location = New System.Drawing.Point(171, 35)
+        Me.btn_tab4_ReDir.Name = "btn_tab4_ReDir"
+        Me.btn_tab4_ReDir.Size = New System.Drawing.Size(156, 39)
+        Me.btn_tab4_ReDir.TabIndex = 20
+        Me.btn_tab4_ReDir.Text = "Reverse Direction"
+        Me.btn_tab4_ReDir.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.serial_app.My.Resources.Resources.mylogo
+        Me.PictureBox2.Location = New System.Drawing.Point(689, 143)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(77, 100)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
+        '
+        'btn_tab4_RunStep
+        '
+        Me.btn_tab4_RunStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_RunStep.Location = New System.Drawing.Point(25, 35)
+        Me.btn_tab4_RunStep.Name = "btn_tab4_RunStep"
+        Me.btn_tab4_RunStep.Size = New System.Drawing.Size(133, 39)
+        Me.btn_tab4_RunStep.TabIndex = 11
+        Me.btn_tab4_RunStep.Text = "Run Step"
+        Me.btn_tab4_RunStep.UseVisualStyleBackColor = True
+        '
+        'btn_tab4_UpStaStep
+        '
+        Me.btn_tab4_UpStaStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_UpStaStep.Location = New System.Drawing.Point(25, 80)
+        Me.btn_tab4_UpStaStep.Name = "btn_tab4_UpStaStep"
+        Me.btn_tab4_UpStaStep.Size = New System.Drawing.Size(133, 39)
+        Me.btn_tab4_UpStaStep.TabIndex = 10
+        Me.btn_tab4_UpStaStep.Text = "State Stepper"
+        Me.btn_tab4_UpStaStep.UseVisualStyleBackColor = True
+        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.shp_led0, Me.shp_led1, Me.shp_led2, Me.shp_led3, Me.shp_led4, Me.shp_led5, Me.shp_led6, Me.shp_led7})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.rectan_Stepper_state, Me.shp_led0, Me.shp_led1, Me.shp_led2, Me.shp_led3, Me.shp_led4, Me.shp_led5, Me.shp_led6, Me.shp_led7})
         Me.ShapeContainer1.Size = New System.Drawing.Size(782, 503)
         Me.ShapeContainer1.TabIndex = 1
         Me.ShapeContainer1.TabStop = False
+        '
+        'rectan_Stepper_state
+        '
+        Me.rectan_Stepper_state.FillColor = System.Drawing.Color.Silver
+        Me.rectan_Stepper_state.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.rectan_Stepper_state.Location = New System.Drawing.Point(270, 180)
+        Me.rectan_Stepper_state.Name = "rectan_Stepper_state"
+        Me.rectan_Stepper_state.Size = New System.Drawing.Size(75, 23)
         '
         'shp_led0
         '
         Me.shp_led0.FillColor = System.Drawing.Color.Gray
         Me.shp_led0.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led0.Location = New System.Drawing.Point(673, 115)
+        Me.shp_led0.Location = New System.Drawing.Point(673, 70)
         Me.shp_led0.Name = "shp_led0"
         Me.shp_led0.Size = New System.Drawing.Size(30, 30)
         '
@@ -573,7 +688,7 @@ Partial Class form_main
         '
         Me.shp_led1.FillColor = System.Drawing.Color.Gray
         Me.shp_led1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led1.Location = New System.Drawing.Point(590, 115)
+        Me.shp_led1.Location = New System.Drawing.Point(590, 70)
         Me.shp_led1.Name = "shp_led1"
         Me.shp_led1.Size = New System.Drawing.Size(30, 30)
         '
@@ -581,7 +696,7 @@ Partial Class form_main
         '
         Me.shp_led2.FillColor = System.Drawing.Color.Gray
         Me.shp_led2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led2.Location = New System.Drawing.Point(507, 115)
+        Me.shp_led2.Location = New System.Drawing.Point(507, 70)
         Me.shp_led2.Name = "shp_led2"
         Me.shp_led2.Size = New System.Drawing.Size(30, 30)
         '
@@ -589,7 +704,7 @@ Partial Class form_main
         '
         Me.shp_led3.FillColor = System.Drawing.Color.Gray
         Me.shp_led3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led3.Location = New System.Drawing.Point(424, 115)
+        Me.shp_led3.Location = New System.Drawing.Point(424, 70)
         Me.shp_led3.Name = "shp_led3"
         Me.shp_led3.Size = New System.Drawing.Size(30, 30)
         '
@@ -597,7 +712,7 @@ Partial Class form_main
         '
         Me.shp_led4.FillColor = System.Drawing.Color.Gray
         Me.shp_led4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led4.Location = New System.Drawing.Point(341, 115)
+        Me.shp_led4.Location = New System.Drawing.Point(341, 70)
         Me.shp_led4.Name = "shp_led4"
         Me.shp_led4.Size = New System.Drawing.Size(30, 30)
         '
@@ -605,7 +720,7 @@ Partial Class form_main
         '
         Me.shp_led5.FillColor = System.Drawing.Color.Gray
         Me.shp_led5.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led5.Location = New System.Drawing.Point(258, 115)
+        Me.shp_led5.Location = New System.Drawing.Point(258, 70)
         Me.shp_led5.Name = "shp_led5"
         Me.shp_led5.Size = New System.Drawing.Size(30, 30)
         '
@@ -613,7 +728,7 @@ Partial Class form_main
         '
         Me.shp_led6.FillColor = System.Drawing.Color.Gray
         Me.shp_led6.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led6.Location = New System.Drawing.Point(175, 115)
+        Me.shp_led6.Location = New System.Drawing.Point(175, 70)
         Me.shp_led6.Name = "shp_led6"
         Me.shp_led6.Size = New System.Drawing.Size(30, 30)
         '
@@ -621,7 +736,7 @@ Partial Class form_main
         '
         Me.shp_led7.FillColor = System.Drawing.Color.Gray
         Me.shp_led7.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.shp_led7.Location = New System.Drawing.Point(92, 115)
+        Me.shp_led7.Location = New System.Drawing.Point(92, 70)
         Me.shp_led7.Name = "shp_led7"
         Me.shp_led7.Size = New System.Drawing.Size(30, 30)
         '
@@ -629,7 +744,7 @@ Partial Class form_main
         '
         Me.lb_led7.AutoSize = True
         Me.lb_led7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led7.Location = New System.Drawing.Point(88, 165)
+        Me.lb_led7.Location = New System.Drawing.Point(88, 120)
         Me.lb_led7.Name = "lb_led7"
         Me.lb_led7.Size = New System.Drawing.Size(52, 17)
         Me.lb_led7.TabIndex = 2
@@ -639,7 +754,7 @@ Partial Class form_main
         '
         Me.lb_led6.AutoSize = True
         Me.lb_led6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led6.Location = New System.Drawing.Point(171, 165)
+        Me.lb_led6.Location = New System.Drawing.Point(171, 120)
         Me.lb_led6.Name = "lb_led6"
         Me.lb_led6.Size = New System.Drawing.Size(52, 17)
         Me.lb_led6.TabIndex = 3
@@ -649,7 +764,7 @@ Partial Class form_main
         '
         Me.lb_led4.AutoSize = True
         Me.lb_led4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led4.Location = New System.Drawing.Point(337, 165)
+        Me.lb_led4.Location = New System.Drawing.Point(337, 120)
         Me.lb_led4.Name = "lb_led4"
         Me.lb_led4.Size = New System.Drawing.Size(52, 17)
         Me.lb_led4.TabIndex = 5
@@ -659,7 +774,7 @@ Partial Class form_main
         '
         Me.lb_led5.AutoSize = True
         Me.lb_led5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led5.Location = New System.Drawing.Point(254, 165)
+        Me.lb_led5.Location = New System.Drawing.Point(254, 120)
         Me.lb_led5.Name = "lb_led5"
         Me.lb_led5.Size = New System.Drawing.Size(52, 17)
         Me.lb_led5.TabIndex = 4
@@ -669,7 +784,7 @@ Partial Class form_main
         '
         Me.lb_led0.AutoSize = True
         Me.lb_led0.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led0.Location = New System.Drawing.Point(669, 165)
+        Me.lb_led0.Location = New System.Drawing.Point(669, 120)
         Me.lb_led0.Name = "lb_led0"
         Me.lb_led0.Size = New System.Drawing.Size(52, 17)
         Me.lb_led0.TabIndex = 9
@@ -679,7 +794,7 @@ Partial Class form_main
         '
         Me.lb_led1.AutoSize = True
         Me.lb_led1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led1.Location = New System.Drawing.Point(586, 165)
+        Me.lb_led1.Location = New System.Drawing.Point(586, 120)
         Me.lb_led1.Name = "lb_led1"
         Me.lb_led1.Size = New System.Drawing.Size(52, 17)
         Me.lb_led1.TabIndex = 8
@@ -689,7 +804,7 @@ Partial Class form_main
         '
         Me.lb_led2.AutoSize = True
         Me.lb_led2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led2.Location = New System.Drawing.Point(503, 165)
+        Me.lb_led2.Location = New System.Drawing.Point(503, 120)
         Me.lb_led2.Name = "lb_led2"
         Me.lb_led2.Size = New System.Drawing.Size(52, 17)
         Me.lb_led2.TabIndex = 7
@@ -699,7 +814,7 @@ Partial Class form_main
         '
         Me.lb_led3.AutoSize = True
         Me.lb_led3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_led3.Location = New System.Drawing.Point(420, 165)
+        Me.lb_led3.Location = New System.Drawing.Point(420, 120)
         Me.lb_led3.Name = "lb_led3"
         Me.lb_led3.Size = New System.Drawing.Size(52, 17)
         Me.lb_led3.TabIndex = 6
@@ -711,7 +826,7 @@ Partial Class form_main
         Me.menu_strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstr_menu_setup, Me.tstr_connect, Me.tstr_status_line, Me.AboutMeToolStripMenuItem})
         Me.menu_strip.Location = New System.Drawing.Point(0, 0)
         Me.menu_strip.Name = "menu_strip"
-        Me.menu_strip.Size = New System.Drawing.Size(782, 30)
+        Me.menu_strip.Size = New System.Drawing.Size(782, 28)
         Me.menu_strip.TabIndex = 10
         Me.menu_strip.Text = "menu_strip"
         '
@@ -719,7 +834,7 @@ Partial Class form_main
         '
         Me.tstr_menu_setup.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstr_Comport, Me.tstr_baud, Me.tstr_dataSize, Me.tstr_parity, Me.tstr_stopbit})
         Me.tstr_menu_setup.Name = "tstr_menu_setup"
-        Me.tstr_menu_setup.Size = New System.Drawing.Size(61, 26)
+        Me.tstr_menu_setup.Size = New System.Drawing.Size(61, 24)
         Me.tstr_menu_setup.Text = "Setup"
         '
         'tstr_Comport
@@ -755,37 +870,103 @@ Partial Class form_main
         'tstr_connect
         '
         Me.tstr_connect.Name = "tstr_connect"
-        Me.tstr_connect.Size = New System.Drawing.Size(113, 26)
+        Me.tstr_connect.Size = New System.Drawing.Size(113, 24)
         Me.tstr_connect.Text = "Disconnected"
         '
         'tstr_status_line
         '
         Me.tstr_status_line.Name = "tstr_status_line"
-        Me.tstr_status_line.Size = New System.Drawing.Size(85, 26)
+        Me.tstr_status_line.Size = New System.Drawing.Size(85, 24)
         Me.tstr_status_line.Text = "State line"
         '
         'AboutMeToolStripMenuItem
         '
         Me.AboutMeToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.AboutMeToolStripMenuItem.Name = "AboutMeToolStripMenuItem"
-        Me.AboutMeToolStripMenuItem.Size = New System.Drawing.Size(89, 26)
+        Me.AboutMeToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.AboutMeToolStripMenuItem.Text = "About me"
         '
         '_SerialPort
         '
         '
-        'rtbx_tab3_readHex
+        'lb_stepDirection
         '
-        Me.rtbx_tab3_readHex.Location = New System.Drawing.Point(311, 80)
-        Me.rtbx_tab3_readHex.Name = "rtbx_tab3_readHex"
-        Me.rtbx_tab3_readHex.Size = New System.Drawing.Size(200, 160)
-        Me.rtbx_tab3_readHex.TabIndex = 23
-        Me.rtbx_tab3_readHex.Text = ""
+        Me.lb_stepDirection.AutoSize = True
+        Me.lb_stepDirection.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_stepDirection.Location = New System.Drawing.Point(420, 183)
+        Me.lb_stepDirection.Name = "lb_stepDirection"
+        Me.lb_stepDirection.Size = New System.Drawing.Size(98, 20)
+        Me.lb_stepDirection.TabIndex = 13
+        Me.lb_stepDirection.Text = "Direction :"
+        '
+        'lb_stepState
+        '
+        Me.lb_stepState.AutoSize = True
+        Me.lb_stepState.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_stepState.Location = New System.Drawing.Point(70, 183)
+        Me.lb_stepState.Name = "lb_stepState"
+        Me.lb_stepState.Size = New System.Drawing.Size(136, 20)
+        Me.lb_stepState.TabIndex = 14
+        Me.lb_stepState.Text = "Stepper State :"
+        '
+        'lb_step_run
+        '
+        Me.lb_step_run.AutoSize = True
+        Me.lb_step_run.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_step_run.Location = New System.Drawing.Point(217, 183)
+        Me.lb_step_run.Name = "lb_step_run"
+        Me.lb_step_run.Size = New System.Drawing.Size(45, 20)
+        Me.lb_step_run.TabIndex = 15
+        Me.lb_step_run.Text = "OFF"
+        '
+        'lb_step_dir
+        '
+        Me.lb_step_dir.AutoSize = True
+        Me.lb_step_dir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_step_dir.Location = New System.Drawing.Point(529, 183)
+        Me.lb_step_dir.Name = "lb_step_dir"
+        Me.lb_step_dir.Size = New System.Drawing.Size(39, 20)
+        Me.lb_step_dir.TabIndex = 16
+        Me.lb_step_dir.Text = "CW"
+        '
+        'trkbar_timeStepper
+        '
+        Me.trkbar_timeStepper.BackColor = System.Drawing.Color.Transparent
+        Me.trkbar_timeStepper.Location = New System.Drawing.Point(98, 195)
+        Me.trkbar_timeStepper.Maximum = 1000
+        Me.trkbar_timeStepper.Minimum = 100
+        Me.trkbar_timeStepper.Name = "trkbar_timeStepper"
+        Me.trkbar_timeStepper.Size = New System.Drawing.Size(194, 23)
+        Me.trkbar_timeStepper.TabIndex = 27
+        Me.trkbar_timeStepper.Text = "Time Delay"
+        Me.trkbar_timeStepper.Value = 150
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.DateTimePicker_tab5)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(774, 251)
+        Me.TabPage1.TabIndex = 4
+        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker_tab5
+        '
+        Me.DateTimePicker_tab5.Location = New System.Drawing.Point(513, 20)
+        Me.DateTimePicker_tab5.Name = "DateTimePicker_tab5"
+        Me.DateTimePicker_tab5.Size = New System.Drawing.Size(233, 22)
+        Me.DateTimePicker_tab5.TabIndex = 29
         '
         'form_main
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         Me.ClientSize = New System.Drawing.Size(782, 503)
+        Me.Controls.Add(Me.lb_step_dir)
+        Me.Controls.Add(Me.lb_step_run)
+        Me.Controls.Add(Me.lb_stepState)
+        Me.Controls.Add(Me.lb_stepDirection)
         Me.Controls.Add(Me.lb_led0)
         Me.Controls.Add(Me.lb_led1)
         Me.Controls.Add(Me.lb_led2)
@@ -794,12 +975,12 @@ Partial Class form_main
         Me.Controls.Add(Me.lb_led5)
         Me.Controls.Add(Me.lb_led6)
         Me.Controls.Add(Me.lb_led7)
-        Me.Controls.Add(Me.tabCtrl_main)
         Me.Controls.Add(Me.menu_strip)
+        Me.Controls.Add(Me.tabCtrl_main)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "form_main"
-        Me.ShowIcon = False
         Me.Text = "Test serial port"
         Me.tabCtrl_main_effect.ResumeLayout(False)
         Me.tabCtrl_main_effect.PerformLayout()
@@ -811,8 +992,12 @@ Partial Class form_main
         Me.tabCtrl_main_cli.ResumeLayout(False)
         Me.tabCtrl_main_cli.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabCtrl_main_stepCtrl.ResumeLayout(False)
+        Me.tabCtrl_main_stepCtrl.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menu_strip.ResumeLayout(False)
         Me.menu_strip.PerformLayout()
+        Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -878,10 +1063,6 @@ Partial Class form_main
     Friend WithEvents lb_tab2_timeDelay As Label
     Friend WithEvents tbx_tab2_timeDelay As TextBox
     Friend WithEvents timer_effect As Timer
-    Friend WithEvents lb_tab2_maxDelay As Label
-    Friend WithEvents tbx_tab2_maxDelay As TextBox
-    Friend WithEvents lb_tab2_minDelay As Label
-    Friend WithEvents tbx_tab2_minDelay As TextBox
     Friend WithEvents tabCtrl_main_cli As TabPage
     Friend WithEvents tabCtrl_main_chb As TabPage
     Friend WithEvents lb_tab3_readCli As Label
@@ -890,4 +1071,23 @@ Partial Class form_main
     Friend WithEvents tbx_tab3_writeCli As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents rtbx_tab3_readHex As RichTextBox
+    Friend WithEvents chb_tab3_autoScroll As CheckBox
+    Friend WithEvents tabCtrl_main_stepCtrl As TabPage
+    Friend WithEvents rectan_Stepper_state As PowerPacks.RectangleShape
+    Friend WithEvents btn_tab4_UpStaStep As Button
+    Friend WithEvents btn_tab4_RunStep As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btn_tab4_ReDir As Button
+    Friend WithEvents btn_tab4_UpDirStep As Button
+    Friend WithEvents btn_tab3_clear As Button
+    Friend WithEvents lb_stepDirection As Label
+    Friend WithEvents lb_stepState As Label
+    Friend WithEvents lb_step_run As Label
+    Friend WithEvents lb_step_dir As Label
+    Friend WithEvents chb_tab2_respState As CheckBox
+    Friend WithEvents lb_tab4_timeStepper As Label
+    Friend WithEvents tbx_tab4_timeStepper As TextBox
+    Friend WithEvents trkbar_timeStepper As MetroFramework.Controls.MetroTrackBar
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents DateTimePicker_tab5 As DateTimePicker
 End Class

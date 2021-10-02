@@ -1,0 +1,17 @@
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\serial_app.exe
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\serial_app.pdb
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\serial_app.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\MetroFramework.Design.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\MetroFramework.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\MetroFramework.Fonts.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Release\Microsoft.VisualBasic.PowerPacks.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.vbproj.AssemblyReference.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.form_main.resources
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.Resources.resources
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.vbproj.GenerateResource.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.vbproj.CoreCompileInputs.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.vbproj.CopyComplete
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.exe
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Release\serial_app.pdb

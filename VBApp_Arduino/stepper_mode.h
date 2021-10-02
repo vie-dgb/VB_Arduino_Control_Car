@@ -25,6 +25,8 @@ void stepper_init(int a, int b, int c, int d, uint32_t timeDelay);
 void stepper_SetDir(int dir);
 void stepper_SetTimeDelay(int dir);
 void stepper_Stop(int StateStep);
+void stepper_respState(void);
+void stepper_respDir(void);
 void stepper_excute(void);
 void stepper_handle(void);
 
@@ -56,18 +58,36 @@ void stepper_init(int a, int b, int c, int d, uint32_t timeDelay)
 void stepper_SetDir(int dir)
 {
     stepDir = dir;
+    stepper_respDir();
 }
 
 /* set stepper run or stop function */
 void stepper_Stop(int StateStep)
 {
     stepState = StateStep;
+    stepper_respState();
 }
 
 /* set timer delay for stepper function */
 void stepper_SetTimeDelay(int dir)
 {
     stepTimeOut = (uint32_t)dir;
+}
+
+/* response state stepper run or stop function */
+void stepper_respState()
+{
+    char stateResp = stepState + 0x30;
+    char resp_state_buff[7] = {'s', 'R', 'S', 'S', stateResp, 't'};
+    Serial.write((const char *)resp_state_buff,6);
+}
+
+/* response direction stepper CW or CCW function */
+void stepper_respDir()
+{
+    char DirResp = stepDir + 0x30;
+    char resp_dir_buff[7] = {'s', 'R', 'S', 'D', DirResp, 't'};
+    Serial.write((const char *)resp_dir_buff,6);
 }
 
 /* check case stepper */

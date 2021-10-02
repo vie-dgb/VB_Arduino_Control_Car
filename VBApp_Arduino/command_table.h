@@ -26,6 +26,8 @@ typedef enum
     CMD_SSR,
     CMD_SSD,
     CMD_SST,
+    CMD_GSS,
+    CMD_GSD,
     CMD_NON,
 }command_e;
 
@@ -49,6 +51,8 @@ const command_entry_t cmd_table[] =
     {"SSR", "Set stepper run or stop.", CMD_SSR},
     {"SSD", "Set step direction.", CMD_SSD},
     {"SST", "Set step time delay.", CMD_SST},
+    {"GSS", "Get direction of stepper.", CMD_GSS},
+    {"GSD", "Get direction of stepper.", CMD_GSD},
     {NULL, "Not found command.", CMD_NON}
 };
 
@@ -119,6 +123,14 @@ void command_excute(char *pCmd, char *argv_1)
         case CMD_SST:{
             int _DelayTime = atoi(argv_1);
             stepper_SetTimeDelay(_DelayTime);
+            break;
+        }
+        case CMD_GSS:{
+            stepper_respState();
+            break;
+        }
+        case CMD_GSD:{
+            stepper_respDir();
             break;
         }
         case CMD_NON:{
