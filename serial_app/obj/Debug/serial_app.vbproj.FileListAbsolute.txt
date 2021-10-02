@@ -1,0 +1,34 @@
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\serial_app.exe
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\serial_app.pdb
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\serial_app.xml
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.vbproj.AssemblyReference.cache
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.Resources.resources
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.vbproj.GenerateResource.cache
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.vbproj.CoreCompileInputs.cache
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.exe
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.xml
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.pdb
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\MetroFramework.Design.dll
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\MetroFramework.dll
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\MetroFramework.Fonts.dll
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.vbproj.CopyComplete
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\obj\Debug\serial_app.form_main.resources
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Study\Measurement & Control by Computer\ThucHanh\serial_app\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\serial_app.exe
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\serial_app.pdb
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\serial_app.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\MetroFramework.Design.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\MetroFramework.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\MetroFramework.Fonts.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.vbproj.AssemblyReference.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.form_main.resources
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.Resources.resources
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.vbproj.GenerateResource.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.vbproj.CoreCompileInputs.cache
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.vbproj.CopyComplete
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.exe
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.xml
+D:\Study\Arduino\My arduino\VB_Serial_App_Basic\serial_app\obj\Debug\serial_app.pdb
