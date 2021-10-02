@@ -71,57 +71,75 @@ Public Class form_main
             tstr_dataSize.DropDownItems.Add(item_databit_inner)
         Next
 
+        'save serial comport setup
         _port_com = "COM__"
         _port_baud = "9600"
         _port_parity = IO.Ports.Parity.None
         _port_data_size = "8"
+
+        'init textbox delay
         tbx_tab2_timeDelay.Text = Val(trkbar_timeDelay.Value)
         tbx_tab4_timeStepper.Text = Val(trkbar_timeStepper.Value)
         cbb_effect_led.SelectedIndex() = 0
+        'update status of serial setup
         update_status_line()
+        'disable all button when startup
         btnEnableControl(False)
 
-        DateTimePicker_tab5.
+        'disable input richtextbox
+        rtbx_tab3_readAll.ReadOnly = True
+        rtbx_tab3_readAscii.ReadOnly = True
+        rtbx_tab3_readHex.ReadOnly = True
     End Sub
 
     'event of item baud inner click
     Private Sub baud_inner_Clicked(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim DropDowntxt As String = DirectCast(sender, ToolStripItem).Text
-        _port_baud = DropDowntxt
-        _SerialPort.BaudRate = _port_baud
-        update_status_line()
+        If _SerialPort.IsOpen() = False Then
+            _port_baud = DropDowntxt
+            _SerialPort.BaudRate = _port_baud
+            update_status_line()
+        End If
     End Sub
 
     'event of item parity inner click
     Private Sub parity_inner_Clicked(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim DropDownindex As String = DirectCast(sender, ToolStripItem).Name
-        _port_parity = parity_array(Val(Strings.Right(DropDownindex, 1)))
-        _SerialPort.Parity = _port_parity
-        update_status_line()
+        If _SerialPort.IsOpen() = False Then
+            _port_parity = parity_array(Val(Strings.Right(DropDownindex, 1)))
+            _SerialPort.Parity = _port_parity
+            update_status_line()
+        End If
     End Sub
 
     'event of item stop bit inner click
     Private Sub stopbit_inner_Clicked(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim DropDownindex As String = DirectCast(sender, ToolStripItem).Name
-        _port_stopbit = stop_bit_array(Val(Strings.Right(DropDownindex, 1)))
-        _SerialPort.StopBits = _port_stopbit
-        update_status_line()
+        If _SerialPort.IsOpen() = False Then
+            _port_stopbit = stop_bit_array(Val(Strings.Right(DropDownindex, 1)))
+            _SerialPort.StopBits = _port_stopbit
+            update_status_line()
+        End If
     End Sub
 
     'event of item data bit inner click
     Private Sub databit_inner_Clicked(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim DropDowntxt As String = DirectCast(sender, ToolStripItem).Text
-        _port_data_size = DropDowntxt
-        _SerialPort.DataBits = _port_data_size
-        update_status_line()
+        If _SerialPort.IsOpen() = False Then
+            _port_data_size = DropDowntxt
+            _SerialPort.DataBits = _port_data_size
+            update_status_line()
+        End If
     End Sub
 
     'event of item COM port inner click
     Private Sub comport_inner_Clicked(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim DropDowntxt As String = DirectCast(sender, ToolStripItem).Text
-        _port_com = DropDowntxt
-        _SerialPort.PortName = _port_com
-        update_status_line()
+        If _SerialPort.IsOpen() = False Then
+            _port_com = DropDowntxt
+            _SerialPort.PortName = _port_com
+            update_status_line()
+        End If
     End Sub
 
     'envent send button in tab 1
@@ -245,6 +263,7 @@ Public Class form_main
     Private Sub btn_tab3_clear_Click(sender As Object, e As EventArgs) Handles btn_tab3_clear.Click
         rtbx_tab3_readAscii.Clear()
         rtbx_tab3_readHex.Clear()
+        rtbx_tab3_readAll.Clear()
     End Sub
 
     'event click run step button
@@ -430,6 +449,12 @@ Public Class form_main
     ' function call by envent data received
     Private Sub DisplayData(ByVal sdata() As Byte)
         Dim lstbyte As Byte = &H_00
+        'print to box all
+        rtbx_tab3_readAll.AppendText(System.Text.Encoding.ASCII.GetString(sdata, 0, sdata.Count))
+        If chb_tab3_autoScroll.Checked = True Then
+            rtbx_tab3_readAll.ScrollToCaret()
+        End If
+
         For tempIndex As Integer = 0 To (sdata.Count - 1)
             If rstate = 0 Then
                 buffIndex = 0

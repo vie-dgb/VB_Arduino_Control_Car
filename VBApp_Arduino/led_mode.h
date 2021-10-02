@@ -16,7 +16,7 @@
 #include "led_effect.h"
 
 #define proteus_simu_addr 0x20
-#define lcd_addr 0x20
+#define lcd_addr 0x27
 
 /* init led variables */
 static LiquidCrystal_I2C lcd_print(proteus_simu_addr,16,4);

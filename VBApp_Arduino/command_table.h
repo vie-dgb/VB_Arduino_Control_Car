@@ -28,6 +28,7 @@ typedef enum
     CMD_SST,
     CMD_GSS,
     CMD_GSD,
+    CMD_HLP,
     CMD_NON,
 }command_e;
 
@@ -51,11 +52,11 @@ const command_entry_t cmd_table[] =
     {"SSR", "Set stepper run or stop.", CMD_SSR},
     {"SSD", "Set step direction.", CMD_SSD},
     {"SST", "Set step time delay.", CMD_SST},
-    {"GSS", "Get direction of stepper.", CMD_GSS},
+    {"GSS", "Get state of stepper run or stop.", CMD_GSS},
     {"GSD", "Get direction of stepper.", CMD_GSD},
+    {"HLP", "Print all command infor.", CMD_HLP},
     {NULL, "Not found command.", CMD_NON}
 };
-
 
 /*------------------------Declare function------------------------*/
 command_e command_search(char *pCmd);
@@ -131,6 +132,18 @@ void command_excute(char *pCmd, char *argv_1)
         }
         case CMD_GSD:{
             stepper_respDir();
+            break;
+        }
+        case CMD_HLP:{
+            int helpIndex = 0;
+            Serial.println(" ");
+            while(cmd_table[helpIndex].Command != CMD_NON)
+            {
+                Serial.print(cmd_table[helpIndex].Name);
+                Serial.print(" : ");
+                Serial.println(cmd_table[helpIndex].Help);
+                helpIndex++;
+            }
             break;
         }
         case CMD_NON:{
