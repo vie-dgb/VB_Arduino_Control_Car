@@ -58,58 +58,64 @@ Partial Class form_main
         Me.lb_step_run = New System.Windows.Forms.Label()
         Me.lb_step_dir = New System.Windows.Forms.Label()
         Me.tabCtrl_main_cli = New System.Windows.Forms.TabPage()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.tbx_tab3_writeCli = New System.Windows.Forms.TextBox()
-        Me.lb_tab3_writeCli = New System.Windows.Forms.Label()
-        Me.rtbx_tab3_readAscii = New System.Windows.Forms.RichTextBox()
-        Me.rtbx_tab3_readHex = New System.Windows.Forms.RichTextBox()
-        Me.chb_tab3_autoScroll = New System.Windows.Forms.CheckBox()
-        Me.btn_tab3_clear = New System.Windows.Forms.Button()
-        Me.rtbx_tab3_readAll = New System.Windows.Forms.RichTextBox()
-        Me.lb_tab3_All = New System.Windows.Forms.Label()
-        Me.lb_tab3_cHex = New System.Windows.Forms.Label()
-        Me.lb_tab3_cAscii = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lb_tab3_cAscii = New System.Windows.Forms.Label()
+        Me.lb_tab3_cHex = New System.Windows.Forms.Label()
+        Me.lb_tab3_All = New System.Windows.Forms.Label()
+        Me.rtbx_tab3_readAll = New System.Windows.Forms.RichTextBox()
+        Me.rtbx_tab3_readHex = New System.Windows.Forms.RichTextBox()
+        Me.rtbx_tab3_readAscii = New System.Windows.Forms.RichTextBox()
+        Me.tbx_tab3_writeCli = New System.Windows.Forms.TextBox()
+        Me.btn_tab3_clear = New System.Windows.Forms.Button()
+        Me.chb_tab3_autoScroll = New System.Windows.Forms.CheckBox()
+        Me.lb_tab3_writeCli = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tabCtrl_main_stepCtrl = New System.Windows.Forms.TabPage()
-        Me.btn_tab4_UpStaStep = New System.Windows.Forms.Button()
-        Me.btn_tab4_RunStep = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.btn_tab4_ReDir = New System.Windows.Forms.Button()
-        Me.btn_tab4_UpDirStep = New System.Windows.Forms.Button()
-        Me.tbx_tab4_timeStepper = New System.Windows.Forms.TextBox()
-        Me.lb_tab4_timeStepper = New System.Windows.Forms.Label()
+        Me.tbx_tab4_stepPerRound = New System.Windows.Forms.TextBox()
+        Me.lb_tab4_stepPerRound = New System.Windows.Forms.Label()
+        Me.lb_tab4_runRound = New System.Windows.Forms.Label()
+        Me.lb_tab4_runStep = New System.Windows.Forms.Label()
+        Me.tbx_tab4_runRound = New System.Windows.Forms.TextBox()
+        Me.tbx_tab4_runStep = New System.Windows.Forms.TextBox()
         Me.trkbar_timeStepper = New MetroFramework.Controls.MetroTrackBar()
+        Me.lb_tab4_timeStepper = New System.Windows.Forms.Label()
+        Me.tbx_tab4_timeStepper = New System.Windows.Forms.TextBox()
+        Me.btn_tab4_UpDirStep = New System.Windows.Forms.Button()
+        Me.btn_tab4_ReDir = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btn_tab4_RunStep = New System.Windows.Forms.Button()
+        Me.btn_tab4_UpStaStep = New System.Windows.Forms.Button()
         Me.tabCtrl_main_effect = New System.Windows.Forms.TabPage()
-        Me.picbx_tab2_logo = New System.Windows.Forms.PictureBox()
-        Me.cbb_effect_led = New System.Windows.Forms.ComboBox()
-        Me.lb_tab2_effectLed = New System.Windows.Forms.Label()
-        Me.btn_tab2_effect = New System.Windows.Forms.Button()
-        Me.trkbar_timeDelay = New MetroFramework.Controls.MetroTrackBar()
-        Me.lb_tab2_timeDelay = New System.Windows.Forms.Label()
-        Me.tbx_tab2_timeDelay = New System.Windows.Forms.TextBox()
         Me.chb_tab2_respState = New System.Windows.Forms.CheckBox()
+        Me.tbx_tab2_timeDelay = New System.Windows.Forms.TextBox()
+        Me.lb_tab2_timeDelay = New System.Windows.Forms.Label()
+        Me.trkbar_timeDelay = New MetroFramework.Controls.MetroTrackBar()
+        Me.btn_tab2_effect = New System.Windows.Forms.Button()
+        Me.lb_tab2_effectLed = New System.Windows.Forms.Label()
+        Me.cbb_effect_led = New System.Windows.Forms.ComboBox()
+        Me.picbx_tab2_logo = New System.Windows.Forms.PictureBox()
         Me.tabCtrl_main_chb = New System.Windows.Forms.TabPage()
-        Me.chb_bit0 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit1 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit2 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit3 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit7 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit6 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit5 = New System.Windows.Forms.CheckBox()
-        Me.chb_bit4 = New System.Windows.Forms.CheckBox()
-        Me.btn_tab1_send = New System.Windows.Forms.Button()
-        Me.tbx_tab1_hexVal = New System.Windows.Forms.TextBox()
-        Me.tbx_tab1_binVal = New System.Windows.Forms.TextBox()
-        Me.tbx_tab1_decVal = New System.Windows.Forms.TextBox()
-        Me.lb_tab1_binVal = New System.Windows.Forms.Label()
-        Me.lb_tab1_hexVal = New System.Windows.Forms.Label()
-        Me.lb_tab1_decVal = New System.Windows.Forms.Label()
-        Me.picbx_tab1_logo = New System.Windows.Forms.PictureBox()
-        Me.btn_tab1_clear = New System.Windows.Forms.Button()
-        Me.tbx_tab1_ascii = New System.Windows.Forms.TextBox()
-        Me.tbx_tab1_octVal = New System.Windows.Forms.TextBox()
-        Me.lb_tab1_octVal = New System.Windows.Forms.Label()
         Me.lb_tab1_ascii = New System.Windows.Forms.Label()
+        Me.lb_tab1_octVal = New System.Windows.Forms.Label()
+        Me.tbx_tab1_octVal = New System.Windows.Forms.TextBox()
+        Me.tbx_tab1_ascii = New System.Windows.Forms.TextBox()
+        Me.tbx_tab1_decVal = New System.Windows.Forms.TextBox()
+        Me.tbx_tab1_binVal = New System.Windows.Forms.TextBox()
+        Me.tbx_tab1_hexVal = New System.Windows.Forms.TextBox()
+        Me.btn_tab1_clear = New System.Windows.Forms.Button()
+        Me.picbx_tab1_logo = New System.Windows.Forms.PictureBox()
+        Me.lb_tab1_decVal = New System.Windows.Forms.Label()
+        Me.lb_tab1_hexVal = New System.Windows.Forms.Label()
+        Me.lb_tab1_binVal = New System.Windows.Forms.Label()
+        Me.btn_tab1_send = New System.Windows.Forms.Button()
+        Me.chb_bit4 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit5 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit6 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit7 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit3 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit2 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit1 = New System.Windows.Forms.CheckBox()
+        Me.chb_bit0 = New System.Windows.Forms.CheckBox()
         Me.tabCtrl_main = New System.Windows.Forms.TabControl()
         Me.menu_strip.SuspendLayout()
         Me.tabCtrl_main_cli.SuspendLayout()
@@ -416,96 +422,15 @@ Partial Class form_main
         Me.tabCtrl_main_cli.Text = "Command Line"
         Me.tabCtrl_main_cli.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Label1
         '
-        Me.PictureBox1.Image = Global.serial_app.My.Resources.Resources.mylogo
-        Me.PictureBox1.Location = New System.Drawing.Point(689, 143)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(77, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 18
-        Me.PictureBox1.TabStop = False
-        '
-        'tbx_tab3_writeCli
-        '
-        Me.tbx_tab3_writeCli.Location = New System.Drawing.Point(160, 24)
-        Me.tbx_tab3_writeCli.Name = "tbx_tab3_writeCli"
-        Me.tbx_tab3_writeCli.Size = New System.Drawing.Size(166, 22)
-        Me.tbx_tab3_writeCli.TabIndex = 19
-        '
-        'lb_tab3_writeCli
-        '
-        Me.lb_tab3_writeCli.AutoSize = True
-        Me.lb_tab3_writeCli.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab3_writeCli.Location = New System.Drawing.Point(8, 24)
-        Me.lb_tab3_writeCli.Name = "lb_tab3_writeCli"
-        Me.lb_tab3_writeCli.Size = New System.Drawing.Size(146, 20)
-        Me.lb_tab3_writeCli.TabIndex = 20
-        Me.lb_tab3_writeCli.Text = "Write command:"
-        '
-        'rtbx_tab3_readAscii
-        '
-        Me.rtbx_tab3_readAscii.Location = New System.Drawing.Point(8, 102)
-        Me.rtbx_tab3_readAscii.Name = "rtbx_tab3_readAscii"
-        Me.rtbx_tab3_readAscii.Size = New System.Drawing.Size(145, 143)
-        Me.rtbx_tab3_readAscii.TabIndex = 21
-        Me.rtbx_tab3_readAscii.Text = ""
-        '
-        'rtbx_tab3_readHex
-        '
-        Me.rtbx_tab3_readHex.Location = New System.Drawing.Point(159, 102)
-        Me.rtbx_tab3_readHex.Name = "rtbx_tab3_readHex"
-        Me.rtbx_tab3_readHex.Size = New System.Drawing.Size(226, 141)
-        Me.rtbx_tab3_readHex.TabIndex = 23
-        Me.rtbx_tab3_readHex.Text = ""
-        '
-        'chb_tab3_autoScroll
-        '
-        Me.chb_tab3_autoScroll.AutoSize = True
-        Me.chb_tab3_autoScroll.Location = New System.Drawing.Point(586, 26)
-        Me.chb_tab3_autoScroll.Name = "chb_tab3_autoScroll"
-        Me.chb_tab3_autoScroll.Size = New System.Drawing.Size(98, 21)
-        Me.chb_tab3_autoScroll.TabIndex = 24
-        Me.chb_tab3_autoScroll.Text = "Auto Scroll"
-        Me.chb_tab3_autoScroll.UseVisualStyleBackColor = True
-        '
-        'btn_tab3_clear
-        '
-        Me.btn_tab3_clear.Location = New System.Drawing.Point(689, 24)
-        Me.btn_tab3_clear.Name = "btn_tab3_clear"
-        Me.btn_tab3_clear.Size = New System.Drawing.Size(75, 23)
-        Me.btn_tab3_clear.TabIndex = 25
-        Me.btn_tab3_clear.Text = "Clear"
-        Me.btn_tab3_clear.UseVisualStyleBackColor = True
-        '
-        'rtbx_tab3_readAll
-        '
-        Me.rtbx_tab3_readAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbx_tab3_readAll.Location = New System.Drawing.Point(391, 102)
-        Me.rtbx_tab3_readAll.Name = "rtbx_tab3_readAll"
-        Me.rtbx_tab3_readAll.Size = New System.Drawing.Size(276, 143)
-        Me.rtbx_tab3_readAll.TabIndex = 26
-        Me.rtbx_tab3_readAll.Text = ""
-        '
-        'lb_tab3_All
-        '
-        Me.lb_tab3_All.AutoSize = True
-        Me.lb_tab3_All.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab3_All.Location = New System.Drawing.Point(490, 79)
-        Me.lb_tab3_All.Name = "lb_tab3_All"
-        Me.lb_tab3_All.Size = New System.Drawing.Size(74, 20)
-        Me.lb_tab3_All.TabIndex = 27
-        Me.lb_tab3_All.Text = "All read"
-        '
-        'lb_tab3_cHex
-        '
-        Me.lb_tab3_cHex.AutoSize = True
-        Me.lb_tab3_cHex.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab3_cHex.Location = New System.Drawing.Point(205, 79)
-        Me.lb_tab3_cHex.Name = "lb_tab3_cHex"
-        Me.lb_tab3_cHex.Size = New System.Drawing.Size(121, 20)
-        Me.lb_tab3_cHex.TabIndex = 28
-        Me.lb_tab3_cHex.Text = "Correct Hexa"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(344, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(190, 20)
+        Me.Label1.TabIndex = 30
+        Me.Label1.Text = "<HLP> see command"
         '
         'lb_tab3_cAscii
         '
@@ -517,18 +442,105 @@ Partial Class form_main
         Me.lb_tab3_cAscii.TabIndex = 29
         Me.lb_tab3_cAscii.Text = "Correct ASCII"
         '
-        'Label1
+        'lb_tab3_cHex
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(344, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(190, 20)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "<HLP> see command"
+        Me.lb_tab3_cHex.AutoSize = True
+        Me.lb_tab3_cHex.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab3_cHex.Location = New System.Drawing.Point(205, 79)
+        Me.lb_tab3_cHex.Name = "lb_tab3_cHex"
+        Me.lb_tab3_cHex.Size = New System.Drawing.Size(121, 20)
+        Me.lb_tab3_cHex.TabIndex = 28
+        Me.lb_tab3_cHex.Text = "Correct Hexa"
+        '
+        'lb_tab3_All
+        '
+        Me.lb_tab3_All.AutoSize = True
+        Me.lb_tab3_All.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab3_All.Location = New System.Drawing.Point(490, 79)
+        Me.lb_tab3_All.Name = "lb_tab3_All"
+        Me.lb_tab3_All.Size = New System.Drawing.Size(74, 20)
+        Me.lb_tab3_All.TabIndex = 27
+        Me.lb_tab3_All.Text = "All read"
+        '
+        'rtbx_tab3_readAll
+        '
+        Me.rtbx_tab3_readAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtbx_tab3_readAll.Location = New System.Drawing.Point(391, 102)
+        Me.rtbx_tab3_readAll.Name = "rtbx_tab3_readAll"
+        Me.rtbx_tab3_readAll.Size = New System.Drawing.Size(276, 143)
+        Me.rtbx_tab3_readAll.TabIndex = 26
+        Me.rtbx_tab3_readAll.Text = ""
+        '
+        'rtbx_tab3_readHex
+        '
+        Me.rtbx_tab3_readHex.Location = New System.Drawing.Point(159, 102)
+        Me.rtbx_tab3_readHex.Name = "rtbx_tab3_readHex"
+        Me.rtbx_tab3_readHex.Size = New System.Drawing.Size(226, 141)
+        Me.rtbx_tab3_readHex.TabIndex = 23
+        Me.rtbx_tab3_readHex.Text = ""
+        '
+        'rtbx_tab3_readAscii
+        '
+        Me.rtbx_tab3_readAscii.Location = New System.Drawing.Point(8, 102)
+        Me.rtbx_tab3_readAscii.Name = "rtbx_tab3_readAscii"
+        Me.rtbx_tab3_readAscii.Size = New System.Drawing.Size(145, 143)
+        Me.rtbx_tab3_readAscii.TabIndex = 21
+        Me.rtbx_tab3_readAscii.Text = ""
+        '
+        'tbx_tab3_writeCli
+        '
+        Me.tbx_tab3_writeCli.Location = New System.Drawing.Point(160, 24)
+        Me.tbx_tab3_writeCli.Name = "tbx_tab3_writeCli"
+        Me.tbx_tab3_writeCli.Size = New System.Drawing.Size(166, 22)
+        Me.tbx_tab3_writeCli.TabIndex = 19
+        '
+        'btn_tab3_clear
+        '
+        Me.btn_tab3_clear.Location = New System.Drawing.Point(689, 24)
+        Me.btn_tab3_clear.Name = "btn_tab3_clear"
+        Me.btn_tab3_clear.Size = New System.Drawing.Size(75, 23)
+        Me.btn_tab3_clear.TabIndex = 25
+        Me.btn_tab3_clear.Text = "Clear"
+        Me.btn_tab3_clear.UseVisualStyleBackColor = True
+        '
+        'chb_tab3_autoScroll
+        '
+        Me.chb_tab3_autoScroll.AutoSize = True
+        Me.chb_tab3_autoScroll.Location = New System.Drawing.Point(586, 26)
+        Me.chb_tab3_autoScroll.Name = "chb_tab3_autoScroll"
+        Me.chb_tab3_autoScroll.Size = New System.Drawing.Size(98, 21)
+        Me.chb_tab3_autoScroll.TabIndex = 24
+        Me.chb_tab3_autoScroll.Text = "Auto Scroll"
+        Me.chb_tab3_autoScroll.UseVisualStyleBackColor = True
+        '
+        'lb_tab3_writeCli
+        '
+        Me.lb_tab3_writeCli.AutoSize = True
+        Me.lb_tab3_writeCli.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab3_writeCli.Location = New System.Drawing.Point(8, 24)
+        Me.lb_tab3_writeCli.Name = "lb_tab3_writeCli"
+        Me.lb_tab3_writeCli.Size = New System.Drawing.Size(146, 20)
+        Me.lb_tab3_writeCli.TabIndex = 20
+        Me.lb_tab3_writeCli.Text = "Write command:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.serial_app.My.Resources.Resources.mylogo
+        Me.PictureBox1.Location = New System.Drawing.Point(689, 143)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(77, 100)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
         '
         'tabCtrl_main_stepCtrl
         '
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.tbx_tab4_stepPerRound)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.lb_tab4_stepPerRound)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.lb_tab4_runRound)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.lb_tab4_runStep)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.tbx_tab4_runRound)
+        Me.tabCtrl_main_stepCtrl.Controls.Add(Me.tbx_tab4_runStep)
         Me.tabCtrl_main_stepCtrl.Controls.Add(Me.trkbar_timeStepper)
         Me.tabCtrl_main_stepCtrl.Controls.Add(Me.lb_tab4_timeStepper)
         Me.tabCtrl_main_stepCtrl.Controls.Add(Me.tbx_tab4_timeStepper)
@@ -545,64 +557,74 @@ Partial Class form_main
         Me.tabCtrl_main_stepCtrl.Text = "Control Stepper"
         Me.tabCtrl_main_stepCtrl.UseVisualStyleBackColor = True
         '
-        'btn_tab4_UpStaStep
+        'tbx_tab4_stepPerRound
         '
-        Me.btn_tab4_UpStaStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab4_UpStaStep.Location = New System.Drawing.Point(25, 80)
-        Me.btn_tab4_UpStaStep.Name = "btn_tab4_UpStaStep"
-        Me.btn_tab4_UpStaStep.Size = New System.Drawing.Size(133, 39)
-        Me.btn_tab4_UpStaStep.TabIndex = 10
-        Me.btn_tab4_UpStaStep.Text = "State Stepper"
-        Me.btn_tab4_UpStaStep.UseVisualStyleBackColor = True
+        Me.tbx_tab4_stepPerRound.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab4_stepPerRound.Location = New System.Drawing.Point(534, 136)
+        Me.tbx_tab4_stepPerRound.Name = "tbx_tab4_stepPerRound"
+        Me.tbx_tab4_stepPerRound.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab4_stepPerRound.TabIndex = 33
+        Me.tbx_tab4_stepPerRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'btn_tab4_RunStep
+        'lb_tab4_stepPerRound
         '
-        Me.btn_tab4_RunStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab4_RunStep.Location = New System.Drawing.Point(25, 35)
-        Me.btn_tab4_RunStep.Name = "btn_tab4_RunStep"
-        Me.btn_tab4_RunStep.Size = New System.Drawing.Size(133, 39)
-        Me.btn_tab4_RunStep.TabIndex = 11
-        Me.btn_tab4_RunStep.Text = "Run Step"
-        Me.btn_tab4_RunStep.UseVisualStyleBackColor = True
+        Me.lb_tab4_stepPerRound.AutoSize = True
+        Me.lb_tab4_stepPerRound.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab4_stepPerRound.Location = New System.Drawing.Point(410, 139)
+        Me.lb_tab4_stepPerRound.Name = "lb_tab4_stepPerRound"
+        Me.lb_tab4_stepPerRound.Size = New System.Drawing.Size(118, 20)
+        Me.lb_tab4_stepPerRound.TabIndex = 32
+        Me.lb_tab4_stepPerRound.Text = "Step/Round :"
         '
-        'PictureBox2
+        'lb_tab4_runRound
         '
-        Me.PictureBox2.Image = Global.serial_app.My.Resources.Resources.mylogo
-        Me.PictureBox2.Location = New System.Drawing.Point(689, 143)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(77, 100)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 19
-        Me.PictureBox2.TabStop = False
+        Me.lb_tab4_runRound.AutoSize = True
+        Me.lb_tab4_runRound.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab4_runRound.Location = New System.Drawing.Point(410, 89)
+        Me.lb_tab4_runRound.Name = "lb_tab4_runRound"
+        Me.lb_tab4_runRound.Size = New System.Drawing.Size(113, 20)
+        Me.lb_tab4_runRound.TabIndex = 31
+        Me.lb_tab4_runRound.Text = "Run Round :"
         '
-        'btn_tab4_ReDir
+        'lb_tab4_runStep
         '
-        Me.btn_tab4_ReDir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab4_ReDir.Location = New System.Drawing.Point(171, 35)
-        Me.btn_tab4_ReDir.Name = "btn_tab4_ReDir"
-        Me.btn_tab4_ReDir.Size = New System.Drawing.Size(156, 39)
-        Me.btn_tab4_ReDir.TabIndex = 20
-        Me.btn_tab4_ReDir.Text = "Reverse Direction"
-        Me.btn_tab4_ReDir.UseVisualStyleBackColor = True
+        Me.lb_tab4_runStep.AutoSize = True
+        Me.lb_tab4_runStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab4_runStep.Location = New System.Drawing.Point(410, 44)
+        Me.lb_tab4_runStep.Name = "lb_tab4_runStep"
+        Me.lb_tab4_runStep.Size = New System.Drawing.Size(98, 20)
+        Me.lb_tab4_runStep.TabIndex = 30
+        Me.lb_tab4_runStep.Text = "Run Step :"
         '
-        'btn_tab4_UpDirStep
+        'tbx_tab4_runRound
         '
-        Me.btn_tab4_UpDirStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab4_UpDirStep.Location = New System.Drawing.Point(171, 80)
-        Me.btn_tab4_UpDirStep.Name = "btn_tab4_UpDirStep"
-        Me.btn_tab4_UpDirStep.Size = New System.Drawing.Size(157, 39)
-        Me.btn_tab4_UpDirStep.TabIndex = 21
-        Me.btn_tab4_UpDirStep.Text = "State Direction"
-        Me.btn_tab4_UpDirStep.UseVisualStyleBackColor = True
+        Me.tbx_tab4_runRound.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab4_runRound.Location = New System.Drawing.Point(534, 86)
+        Me.tbx_tab4_runRound.Name = "tbx_tab4_runRound"
+        Me.tbx_tab4_runRound.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab4_runRound.TabIndex = 29
+        Me.tbx_tab4_runRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'tbx_tab4_timeStepper
+        'tbx_tab4_runStep
         '
-        Me.tbx_tab4_timeStepper.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab4_timeStepper.Location = New System.Drawing.Point(171, 150)
-        Me.tbx_tab4_timeStepper.Name = "tbx_tab4_timeStepper"
-        Me.tbx_tab4_timeStepper.Size = New System.Drawing.Size(121, 27)
-        Me.tbx_tab4_timeStepper.TabIndex = 25
-        Me.tbx_tab4_timeStepper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.tbx_tab4_runStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab4_runStep.Location = New System.Drawing.Point(534, 41)
+        Me.tbx_tab4_runStep.Name = "tbx_tab4_runStep"
+        Me.tbx_tab4_runStep.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab4_runStep.TabIndex = 28
+        Me.tbx_tab4_runStep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'trkbar_timeStepper
+        '
+        Me.trkbar_timeStepper.BackColor = System.Drawing.Color.Transparent
+        Me.trkbar_timeStepper.Location = New System.Drawing.Point(98, 195)
+        Me.trkbar_timeStepper.Maximum = 500
+        Me.trkbar_timeStepper.Minimum = 25
+        Me.trkbar_timeStepper.Name = "trkbar_timeStepper"
+        Me.trkbar_timeStepper.Size = New System.Drawing.Size(194, 23)
+        Me.trkbar_timeStepper.TabIndex = 27
+        Me.trkbar_timeStepper.Text = "Time Delay"
+        Me.trkbar_timeStepper.Value = 150
         '
         'lb_tab4_timeStepper
         '
@@ -614,17 +636,64 @@ Partial Class form_main
         Me.lb_tab4_timeStepper.TabIndex = 26
         Me.lb_tab4_timeStepper.Text = "Delay :"
         '
-        'trkbar_timeStepper
+        'tbx_tab4_timeStepper
         '
-        Me.trkbar_timeStepper.BackColor = System.Drawing.Color.Transparent
-        Me.trkbar_timeStepper.Location = New System.Drawing.Point(98, 195)
-        Me.trkbar_timeStepper.Maximum = 1000
-        Me.trkbar_timeStepper.Minimum = 100
-        Me.trkbar_timeStepper.Name = "trkbar_timeStepper"
-        Me.trkbar_timeStepper.Size = New System.Drawing.Size(194, 23)
-        Me.trkbar_timeStepper.TabIndex = 27
-        Me.trkbar_timeStepper.Text = "Time Delay"
-        Me.trkbar_timeStepper.Value = 150
+        Me.tbx_tab4_timeStepper.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab4_timeStepper.Location = New System.Drawing.Point(171, 150)
+        Me.tbx_tab4_timeStepper.Name = "tbx_tab4_timeStepper"
+        Me.tbx_tab4_timeStepper.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab4_timeStepper.TabIndex = 25
+        Me.tbx_tab4_timeStepper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btn_tab4_UpDirStep
+        '
+        Me.btn_tab4_UpDirStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_UpDirStep.Location = New System.Drawing.Point(171, 80)
+        Me.btn_tab4_UpDirStep.Name = "btn_tab4_UpDirStep"
+        Me.btn_tab4_UpDirStep.Size = New System.Drawing.Size(157, 39)
+        Me.btn_tab4_UpDirStep.TabIndex = 21
+        Me.btn_tab4_UpDirStep.Text = "State Direction"
+        Me.btn_tab4_UpDirStep.UseVisualStyleBackColor = True
+        '
+        'btn_tab4_ReDir
+        '
+        Me.btn_tab4_ReDir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_ReDir.Location = New System.Drawing.Point(171, 35)
+        Me.btn_tab4_ReDir.Name = "btn_tab4_ReDir"
+        Me.btn_tab4_ReDir.Size = New System.Drawing.Size(156, 39)
+        Me.btn_tab4_ReDir.TabIndex = 20
+        Me.btn_tab4_ReDir.Text = "Reverse Direction"
+        Me.btn_tab4_ReDir.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.serial_app.My.Resources.Resources.mylogo
+        Me.PictureBox2.Location = New System.Drawing.Point(689, 143)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(77, 100)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
+        '
+        'btn_tab4_RunStep
+        '
+        Me.btn_tab4_RunStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_RunStep.Location = New System.Drawing.Point(25, 35)
+        Me.btn_tab4_RunStep.Name = "btn_tab4_RunStep"
+        Me.btn_tab4_RunStep.Size = New System.Drawing.Size(133, 39)
+        Me.btn_tab4_RunStep.TabIndex = 11
+        Me.btn_tab4_RunStep.Text = "Run Step"
+        Me.btn_tab4_RunStep.UseVisualStyleBackColor = True
+        '
+        'btn_tab4_UpStaStep
+        '
+        Me.btn_tab4_UpStaStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab4_UpStaStep.Location = New System.Drawing.Point(25, 80)
+        Me.btn_tab4_UpStaStep.Name = "btn_tab4_UpStaStep"
+        Me.btn_tab4_UpStaStep.Size = New System.Drawing.Size(133, 39)
+        Me.btn_tab4_UpStaStep.TabIndex = 10
+        Me.btn_tab4_UpStaStep.Text = "State Stepper"
+        Me.btn_tab4_UpStaStep.UseVisualStyleBackColor = True
         '
         'tabCtrl_main_effect
         '
@@ -644,45 +713,34 @@ Partial Class form_main
         Me.tabCtrl_main_effect.Text = "Effect mode"
         Me.tabCtrl_main_effect.UseVisualStyleBackColor = True
         '
-        'picbx_tab2_logo
+        'chb_tab2_respState
         '
-        Me.picbx_tab2_logo.Image = Global.serial_app.My.Resources.Resources.mylogo
-        Me.picbx_tab2_logo.Location = New System.Drawing.Point(689, 143)
-        Me.picbx_tab2_logo.Name = "picbx_tab2_logo"
-        Me.picbx_tab2_logo.Size = New System.Drawing.Size(77, 100)
-        Me.picbx_tab2_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbx_tab2_logo.TabIndex = 17
-        Me.picbx_tab2_logo.TabStop = False
+        Me.chb_tab2_respState.AutoSize = True
+        Me.chb_tab2_respState.Location = New System.Drawing.Point(266, 126)
+        Me.chb_tab2_respState.Name = "chb_tab2_respState"
+        Me.chb_tab2_respState.Size = New System.Drawing.Size(152, 21)
+        Me.chb_tab2_respState.TabIndex = 25
+        Me.chb_tab2_respState.Text = "Response led state"
+        Me.chb_tab2_respState.UseVisualStyleBackColor = True
         '
-        'cbb_effect_led
+        'tbx_tab2_timeDelay
         '
-        Me.cbb_effect_led.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbb_effect_led.FormattingEnabled = True
-        Me.cbb_effect_led.Items.AddRange(New Object() {"Off", "Mode 1", "Mode 2", "Mode 3", "Mode 4", "Mode 5"})
-        Me.cbb_effect_led.Location = New System.Drawing.Point(100, 45)
-        Me.cbb_effect_led.Name = "cbb_effect_led"
-        Me.cbb_effect_led.Size = New System.Drawing.Size(121, 28)
-        Me.cbb_effect_led.TabIndex = 18
+        Me.tbx_tab2_timeDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab2_timeDelay.Location = New System.Drawing.Point(100, 121)
+        Me.tbx_tab2_timeDelay.Name = "tbx_tab2_timeDelay"
+        Me.tbx_tab2_timeDelay.Size = New System.Drawing.Size(121, 27)
+        Me.tbx_tab2_timeDelay.TabIndex = 24
+        Me.tbx_tab2_timeDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lb_tab2_effectLed
+        'lb_tab2_timeDelay
         '
-        Me.lb_tab2_effectLed.AutoSize = True
-        Me.lb_tab2_effectLed.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab2_effectLed.Location = New System.Drawing.Point(21, 48)
-        Me.lb_tab2_effectLed.Name = "lb_tab2_effectLed"
-        Me.lb_tab2_effectLed.Size = New System.Drawing.Size(71, 20)
-        Me.lb_tab2_effectLed.TabIndex = 19
-        Me.lb_tab2_effectLed.Text = "Effect :"
-        '
-        'btn_tab2_effect
-        '
-        Me.btn_tab2_effect.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab2_effect.Location = New System.Drawing.Point(266, 39)
-        Me.btn_tab2_effect.Name = "btn_tab2_effect"
-        Me.btn_tab2_effect.Size = New System.Drawing.Size(102, 39)
-        Me.btn_tab2_effect.TabIndex = 20
-        Me.btn_tab2_effect.Text = "Run effect"
-        Me.btn_tab2_effect.UseVisualStyleBackColor = True
+        Me.lb_tab2_timeDelay.AutoSize = True
+        Me.lb_tab2_timeDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab2_timeDelay.Location = New System.Drawing.Point(23, 124)
+        Me.lb_tab2_timeDelay.Name = "lb_tab2_timeDelay"
+        Me.lb_tab2_timeDelay.Size = New System.Drawing.Size(69, 20)
+        Me.lb_tab2_timeDelay.TabIndex = 23
+        Me.lb_tab2_timeDelay.Text = "Delay :"
         '
         'trkbar_timeDelay
         '
@@ -696,34 +754,45 @@ Partial Class form_main
         Me.trkbar_timeDelay.Text = "Time Delay"
         Me.trkbar_timeDelay.Value = 2500
         '
-        'lb_tab2_timeDelay
+        'btn_tab2_effect
         '
-        Me.lb_tab2_timeDelay.AutoSize = True
-        Me.lb_tab2_timeDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab2_timeDelay.Location = New System.Drawing.Point(23, 124)
-        Me.lb_tab2_timeDelay.Name = "lb_tab2_timeDelay"
-        Me.lb_tab2_timeDelay.Size = New System.Drawing.Size(69, 20)
-        Me.lb_tab2_timeDelay.TabIndex = 23
-        Me.lb_tab2_timeDelay.Text = "Delay :"
+        Me.btn_tab2_effect.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab2_effect.Location = New System.Drawing.Point(266, 39)
+        Me.btn_tab2_effect.Name = "btn_tab2_effect"
+        Me.btn_tab2_effect.Size = New System.Drawing.Size(102, 39)
+        Me.btn_tab2_effect.TabIndex = 20
+        Me.btn_tab2_effect.Text = "Run effect"
+        Me.btn_tab2_effect.UseVisualStyleBackColor = True
         '
-        'tbx_tab2_timeDelay
+        'lb_tab2_effectLed
         '
-        Me.tbx_tab2_timeDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab2_timeDelay.Location = New System.Drawing.Point(100, 121)
-        Me.tbx_tab2_timeDelay.Name = "tbx_tab2_timeDelay"
-        Me.tbx_tab2_timeDelay.Size = New System.Drawing.Size(121, 27)
-        Me.tbx_tab2_timeDelay.TabIndex = 24
-        Me.tbx_tab2_timeDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.lb_tab2_effectLed.AutoSize = True
+        Me.lb_tab2_effectLed.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab2_effectLed.Location = New System.Drawing.Point(21, 48)
+        Me.lb_tab2_effectLed.Name = "lb_tab2_effectLed"
+        Me.lb_tab2_effectLed.Size = New System.Drawing.Size(71, 20)
+        Me.lb_tab2_effectLed.TabIndex = 19
+        Me.lb_tab2_effectLed.Text = "Effect :"
         '
-        'chb_tab2_respState
+        'cbb_effect_led
         '
-        Me.chb_tab2_respState.AutoSize = True
-        Me.chb_tab2_respState.Location = New System.Drawing.Point(266, 126)
-        Me.chb_tab2_respState.Name = "chb_tab2_respState"
-        Me.chb_tab2_respState.Size = New System.Drawing.Size(152, 21)
-        Me.chb_tab2_respState.TabIndex = 25
-        Me.chb_tab2_respState.Text = "Response led state"
-        Me.chb_tab2_respState.UseVisualStyleBackColor = True
+        Me.cbb_effect_led.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbb_effect_led.FormattingEnabled = True
+        Me.cbb_effect_led.Items.AddRange(New Object() {"Off", "Mode 1", "Mode 2", "Mode 3", "Mode 4", "Mode 5"})
+        Me.cbb_effect_led.Location = New System.Drawing.Point(100, 45)
+        Me.cbb_effect_led.Name = "cbb_effect_led"
+        Me.cbb_effect_led.Size = New System.Drawing.Size(121, 28)
+        Me.cbb_effect_led.TabIndex = 18
+        '
+        'picbx_tab2_logo
+        '
+        Me.picbx_tab2_logo.Image = Global.serial_app.My.Resources.Resources.mylogo
+        Me.picbx_tab2_logo.Location = New System.Drawing.Point(689, 143)
+        Me.picbx_tab2_logo.Name = "picbx_tab2_logo"
+        Me.picbx_tab2_logo.Size = New System.Drawing.Size(77, 100)
+        Me.picbx_tab2_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbx_tab2_logo.TabIndex = 17
+        Me.picbx_tab2_logo.TabStop = False
         '
         'tabCtrl_main_chb
         '
@@ -756,82 +825,130 @@ Partial Class form_main
         Me.tabCtrl_main_chb.Text = "Check Box"
         Me.tabCtrl_main_chb.UseVisualStyleBackColor = True
         '
-        'chb_bit0
+        'lb_tab1_ascii
         '
-        Me.chb_bit0.AutoSize = True
-        Me.chb_bit0.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit0.Location = New System.Drawing.Point(687, 40)
-        Me.chb_bit0.Name = "chb_bit0"
-        Me.chb_bit0.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit0.TabIndex = 1
-        Me.chb_bit0.Text = "Bit 0"
-        Me.chb_bit0.UseVisualStyleBackColor = True
+        Me.lb_tab1_ascii.AutoSize = True
+        Me.lb_tab1_ascii.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab1_ascii.Location = New System.Drawing.Point(234, 153)
+        Me.lb_tab1_ascii.Name = "lb_tab1_ascii"
+        Me.lb_tab1_ascii.Size = New System.Drawing.Size(63, 20)
+        Me.lb_tab1_ascii.TabIndex = 21
+        Me.lb_tab1_ascii.Text = "Ascii :"
         '
-        'chb_bit1
+        'lb_tab1_octVal
         '
-        Me.chb_bit1.AutoSize = True
-        Me.chb_bit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit1.Location = New System.Drawing.Point(593, 40)
-        Me.chb_bit1.Name = "chb_bit1"
-        Me.chb_bit1.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit1.TabIndex = 2
-        Me.chb_bit1.Text = "Bit 1"
-        Me.chb_bit1.UseVisualStyleBackColor = True
+        Me.lb_tab1_octVal.AutoSize = True
+        Me.lb_tab1_octVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab1_octVal.Location = New System.Drawing.Point(235, 103)
+        Me.lb_tab1_octVal.Name = "lb_tab1_octVal"
+        Me.lb_tab1_octVal.Size = New System.Drawing.Size(51, 20)
+        Me.lb_tab1_octVal.TabIndex = 20
+        Me.lb_tab1_octVal.Text = "Oct :"
         '
-        'chb_bit2
+        'tbx_tab1_octVal
         '
-        Me.chb_bit2.AutoSize = True
-        Me.chb_bit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit2.Location = New System.Drawing.Point(499, 40)
-        Me.chb_bit2.Name = "chb_bit2"
-        Me.chb_bit2.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit2.TabIndex = 3
-        Me.chb_bit2.Text = "Bit 2"
-        Me.chb_bit2.UseVisualStyleBackColor = True
+        Me.tbx_tab1_octVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab1_octVal.Location = New System.Drawing.Point(311, 100)
+        Me.tbx_tab1_octVal.Name = "tbx_tab1_octVal"
+        Me.tbx_tab1_octVal.Size = New System.Drawing.Size(97, 27)
+        Me.tbx_tab1_octVal.TabIndex = 19
+        Me.tbx_tab1_octVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chb_bit3
+        'tbx_tab1_ascii
         '
-        Me.chb_bit3.AutoSize = True
-        Me.chb_bit3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit3.Location = New System.Drawing.Point(405, 40)
-        Me.chb_bit3.Name = "chb_bit3"
-        Me.chb_bit3.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit3.TabIndex = 4
-        Me.chb_bit3.Text = "Bit 3"
-        Me.chb_bit3.UseVisualStyleBackColor = True
+        Me.tbx_tab1_ascii.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab1_ascii.Location = New System.Drawing.Point(311, 150)
+        Me.tbx_tab1_ascii.Name = "tbx_tab1_ascii"
+        Me.tbx_tab1_ascii.Size = New System.Drawing.Size(97, 27)
+        Me.tbx_tab1_ascii.TabIndex = 18
+        Me.tbx_tab1_ascii.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chb_bit7
+        'tbx_tab1_decVal
         '
-        Me.chb_bit7.AutoSize = True
-        Me.chb_bit7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit7.Location = New System.Drawing.Point(29, 40)
-        Me.chb_bit7.Name = "chb_bit7"
-        Me.chb_bit7.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit7.TabIndex = 5
-        Me.chb_bit7.Text = "Bit 7"
-        Me.chb_bit7.UseVisualStyleBackColor = True
+        Me.tbx_tab1_decVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab1_decVal.Location = New System.Drawing.Point(90, 200)
+        Me.tbx_tab1_decVal.Name = "tbx_tab1_decVal"
+        Me.tbx_tab1_decVal.Size = New System.Drawing.Size(97, 27)
+        Me.tbx_tab1_decVal.TabIndex = 12
+        Me.tbx_tab1_decVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chb_bit6
+        'tbx_tab1_binVal
         '
-        Me.chb_bit6.AutoSize = True
-        Me.chb_bit6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit6.Location = New System.Drawing.Point(123, 40)
-        Me.chb_bit6.Name = "chb_bit6"
-        Me.chb_bit6.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit6.TabIndex = 6
-        Me.chb_bit6.Text = "Bit 6"
-        Me.chb_bit6.UseVisualStyleBackColor = True
+        Me.tbx_tab1_binVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab1_binVal.Location = New System.Drawing.Point(90, 100)
+        Me.tbx_tab1_binVal.Name = "tbx_tab1_binVal"
+        Me.tbx_tab1_binVal.Size = New System.Drawing.Size(97, 27)
+        Me.tbx_tab1_binVal.TabIndex = 11
+        Me.tbx_tab1_binVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chb_bit5
+        'tbx_tab1_hexVal
         '
-        Me.chb_bit5.AutoSize = True
-        Me.chb_bit5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_bit5.Location = New System.Drawing.Point(217, 40)
-        Me.chb_bit5.Name = "chb_bit5"
-        Me.chb_bit5.Size = New System.Drawing.Size(71, 24)
-        Me.chb_bit5.TabIndex = 7
-        Me.chb_bit5.Text = "Bit 5"
-        Me.chb_bit5.UseVisualStyleBackColor = True
+        Me.tbx_tab1_hexVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbx_tab1_hexVal.Location = New System.Drawing.Point(90, 150)
+        Me.tbx_tab1_hexVal.Name = "tbx_tab1_hexVal"
+        Me.tbx_tab1_hexVal.Size = New System.Drawing.Size(97, 27)
+        Me.tbx_tab1_hexVal.TabIndex = 10
+        Me.tbx_tab1_hexVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btn_tab1_clear
+        '
+        Me.btn_tab1_clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab1_clear.Location = New System.Drawing.Point(476, 166)
+        Me.btn_tab1_clear.Name = "btn_tab1_clear"
+        Me.btn_tab1_clear.Size = New System.Drawing.Size(94, 35)
+        Me.btn_tab1_clear.TabIndex = 17
+        Me.btn_tab1_clear.Text = "Clear"
+        Me.btn_tab1_clear.UseVisualStyleBackColor = True
+        '
+        'picbx_tab1_logo
+        '
+        Me.picbx_tab1_logo.Image = Global.serial_app.My.Resources.Resources.mylogo
+        Me.picbx_tab1_logo.Location = New System.Drawing.Point(689, 143)
+        Me.picbx_tab1_logo.Name = "picbx_tab1_logo"
+        Me.picbx_tab1_logo.Size = New System.Drawing.Size(77, 100)
+        Me.picbx_tab1_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbx_tab1_logo.TabIndex = 16
+        Me.picbx_tab1_logo.TabStop = False
+        '
+        'lb_tab1_decVal
+        '
+        Me.lb_tab1_decVal.AutoSize = True
+        Me.lb_tab1_decVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab1_decVal.Location = New System.Drawing.Point(22, 203)
+        Me.lb_tab1_decVal.Name = "lb_tab1_decVal"
+        Me.lb_tab1_decVal.Size = New System.Drawing.Size(55, 20)
+        Me.lb_tab1_decVal.TabIndex = 15
+        Me.lb_tab1_decVal.Text = "Dec :"
+        '
+        'lb_tab1_hexVal
+        '
+        Me.lb_tab1_hexVal.AutoSize = True
+        Me.lb_tab1_hexVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab1_hexVal.Location = New System.Drawing.Point(22, 153)
+        Me.lb_tab1_hexVal.Name = "lb_tab1_hexVal"
+        Me.lb_tab1_hexVal.Size = New System.Drawing.Size(54, 20)
+        Me.lb_tab1_hexVal.TabIndex = 14
+        Me.lb_tab1_hexVal.Text = "Hex :"
+        '
+        'lb_tab1_binVal
+        '
+        Me.lb_tab1_binVal.AutoSize = True
+        Me.lb_tab1_binVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_tab1_binVal.Location = New System.Drawing.Point(23, 103)
+        Me.lb_tab1_binVal.Name = "lb_tab1_binVal"
+        Me.lb_tab1_binVal.Size = New System.Drawing.Size(49, 20)
+        Me.lb_tab1_binVal.TabIndex = 13
+        Me.lb_tab1_binVal.Text = "Bin :"
+        '
+        'btn_tab1_send
+        '
+        Me.btn_tab1_send.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tab1_send.Location = New System.Drawing.Point(476, 103)
+        Me.btn_tab1_send.Name = "btn_tab1_send"
+        Me.btn_tab1_send.Size = New System.Drawing.Size(94, 39)
+        Me.btn_tab1_send.TabIndex = 9
+        Me.btn_tab1_send.Text = "Send"
+        Me.btn_tab1_send.UseVisualStyleBackColor = True
         '
         'chb_bit4
         '
@@ -844,130 +961,82 @@ Partial Class form_main
         Me.chb_bit4.Text = "Bit 4"
         Me.chb_bit4.UseVisualStyleBackColor = True
         '
-        'btn_tab1_send
+        'chb_bit5
         '
-        Me.btn_tab1_send.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab1_send.Location = New System.Drawing.Point(476, 103)
-        Me.btn_tab1_send.Name = "btn_tab1_send"
-        Me.btn_tab1_send.Size = New System.Drawing.Size(94, 39)
-        Me.btn_tab1_send.TabIndex = 9
-        Me.btn_tab1_send.Text = "Send"
-        Me.btn_tab1_send.UseVisualStyleBackColor = True
+        Me.chb_bit5.AutoSize = True
+        Me.chb_bit5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit5.Location = New System.Drawing.Point(217, 40)
+        Me.chb_bit5.Name = "chb_bit5"
+        Me.chb_bit5.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit5.TabIndex = 7
+        Me.chb_bit5.Text = "Bit 5"
+        Me.chb_bit5.UseVisualStyleBackColor = True
         '
-        'tbx_tab1_hexVal
+        'chb_bit6
         '
-        Me.tbx_tab1_hexVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab1_hexVal.Location = New System.Drawing.Point(90, 150)
-        Me.tbx_tab1_hexVal.Name = "tbx_tab1_hexVal"
-        Me.tbx_tab1_hexVal.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab1_hexVal.TabIndex = 10
-        Me.tbx_tab1_hexVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.chb_bit6.AutoSize = True
+        Me.chb_bit6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit6.Location = New System.Drawing.Point(123, 40)
+        Me.chb_bit6.Name = "chb_bit6"
+        Me.chb_bit6.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit6.TabIndex = 6
+        Me.chb_bit6.Text = "Bit 6"
+        Me.chb_bit6.UseVisualStyleBackColor = True
         '
-        'tbx_tab1_binVal
+        'chb_bit7
         '
-        Me.tbx_tab1_binVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab1_binVal.Location = New System.Drawing.Point(90, 100)
-        Me.tbx_tab1_binVal.Name = "tbx_tab1_binVal"
-        Me.tbx_tab1_binVal.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab1_binVal.TabIndex = 11
-        Me.tbx_tab1_binVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.chb_bit7.AutoSize = True
+        Me.chb_bit7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit7.Location = New System.Drawing.Point(29, 40)
+        Me.chb_bit7.Name = "chb_bit7"
+        Me.chb_bit7.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit7.TabIndex = 5
+        Me.chb_bit7.Text = "Bit 7"
+        Me.chb_bit7.UseVisualStyleBackColor = True
         '
-        'tbx_tab1_decVal
+        'chb_bit3
         '
-        Me.tbx_tab1_decVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab1_decVal.Location = New System.Drawing.Point(90, 200)
-        Me.tbx_tab1_decVal.Name = "tbx_tab1_decVal"
-        Me.tbx_tab1_decVal.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab1_decVal.TabIndex = 12
-        Me.tbx_tab1_decVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.chb_bit3.AutoSize = True
+        Me.chb_bit3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit3.Location = New System.Drawing.Point(405, 40)
+        Me.chb_bit3.Name = "chb_bit3"
+        Me.chb_bit3.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit3.TabIndex = 4
+        Me.chb_bit3.Text = "Bit 3"
+        Me.chb_bit3.UseVisualStyleBackColor = True
         '
-        'lb_tab1_binVal
+        'chb_bit2
         '
-        Me.lb_tab1_binVal.AutoSize = True
-        Me.lb_tab1_binVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab1_binVal.Location = New System.Drawing.Point(23, 103)
-        Me.lb_tab1_binVal.Name = "lb_tab1_binVal"
-        Me.lb_tab1_binVal.Size = New System.Drawing.Size(49, 20)
-        Me.lb_tab1_binVal.TabIndex = 13
-        Me.lb_tab1_binVal.Text = "Bin :"
+        Me.chb_bit2.AutoSize = True
+        Me.chb_bit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit2.Location = New System.Drawing.Point(499, 40)
+        Me.chb_bit2.Name = "chb_bit2"
+        Me.chb_bit2.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit2.TabIndex = 3
+        Me.chb_bit2.Text = "Bit 2"
+        Me.chb_bit2.UseVisualStyleBackColor = True
         '
-        'lb_tab1_hexVal
+        'chb_bit1
         '
-        Me.lb_tab1_hexVal.AutoSize = True
-        Me.lb_tab1_hexVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab1_hexVal.Location = New System.Drawing.Point(22, 153)
-        Me.lb_tab1_hexVal.Name = "lb_tab1_hexVal"
-        Me.lb_tab1_hexVal.Size = New System.Drawing.Size(54, 20)
-        Me.lb_tab1_hexVal.TabIndex = 14
-        Me.lb_tab1_hexVal.Text = "Hex :"
+        Me.chb_bit1.AutoSize = True
+        Me.chb_bit1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit1.Location = New System.Drawing.Point(593, 40)
+        Me.chb_bit1.Name = "chb_bit1"
+        Me.chb_bit1.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit1.TabIndex = 2
+        Me.chb_bit1.Text = "Bit 1"
+        Me.chb_bit1.UseVisualStyleBackColor = True
         '
-        'lb_tab1_decVal
+        'chb_bit0
         '
-        Me.lb_tab1_decVal.AutoSize = True
-        Me.lb_tab1_decVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab1_decVal.Location = New System.Drawing.Point(22, 203)
-        Me.lb_tab1_decVal.Name = "lb_tab1_decVal"
-        Me.lb_tab1_decVal.Size = New System.Drawing.Size(55, 20)
-        Me.lb_tab1_decVal.TabIndex = 15
-        Me.lb_tab1_decVal.Text = "Dec :"
-        '
-        'picbx_tab1_logo
-        '
-        Me.picbx_tab1_logo.Image = Global.serial_app.My.Resources.Resources.mylogo
-        Me.picbx_tab1_logo.Location = New System.Drawing.Point(689, 143)
-        Me.picbx_tab1_logo.Name = "picbx_tab1_logo"
-        Me.picbx_tab1_logo.Size = New System.Drawing.Size(77, 100)
-        Me.picbx_tab1_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbx_tab1_logo.TabIndex = 16
-        Me.picbx_tab1_logo.TabStop = False
-        '
-        'btn_tab1_clear
-        '
-        Me.btn_tab1_clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tab1_clear.Location = New System.Drawing.Point(476, 166)
-        Me.btn_tab1_clear.Name = "btn_tab1_clear"
-        Me.btn_tab1_clear.Size = New System.Drawing.Size(94, 35)
-        Me.btn_tab1_clear.TabIndex = 17
-        Me.btn_tab1_clear.Text = "Clear"
-        Me.btn_tab1_clear.UseVisualStyleBackColor = True
-        '
-        'tbx_tab1_ascii
-        '
-        Me.tbx_tab1_ascii.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab1_ascii.Location = New System.Drawing.Point(311, 150)
-        Me.tbx_tab1_ascii.Name = "tbx_tab1_ascii"
-        Me.tbx_tab1_ascii.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab1_ascii.TabIndex = 18
-        Me.tbx_tab1_ascii.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'tbx_tab1_octVal
-        '
-        Me.tbx_tab1_octVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbx_tab1_octVal.Location = New System.Drawing.Point(311, 100)
-        Me.tbx_tab1_octVal.Name = "tbx_tab1_octVal"
-        Me.tbx_tab1_octVal.Size = New System.Drawing.Size(97, 27)
-        Me.tbx_tab1_octVal.TabIndex = 19
-        Me.tbx_tab1_octVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lb_tab1_octVal
-        '
-        Me.lb_tab1_octVal.AutoSize = True
-        Me.lb_tab1_octVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab1_octVal.Location = New System.Drawing.Point(235, 103)
-        Me.lb_tab1_octVal.Name = "lb_tab1_octVal"
-        Me.lb_tab1_octVal.Size = New System.Drawing.Size(51, 20)
-        Me.lb_tab1_octVal.TabIndex = 20
-        Me.lb_tab1_octVal.Text = "Oct :"
-        '
-        'lb_tab1_ascii
-        '
-        Me.lb_tab1_ascii.AutoSize = True
-        Me.lb_tab1_ascii.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_tab1_ascii.Location = New System.Drawing.Point(234, 153)
-        Me.lb_tab1_ascii.Name = "lb_tab1_ascii"
-        Me.lb_tab1_ascii.Size = New System.Drawing.Size(63, 20)
-        Me.lb_tab1_ascii.TabIndex = 21
-        Me.lb_tab1_ascii.Text = "Ascii :"
+        Me.chb_bit0.AutoSize = True
+        Me.chb_bit0.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_bit0.Location = New System.Drawing.Point(687, 40)
+        Me.chb_bit0.Name = "chb_bit0"
+        Me.chb_bit0.Size = New System.Drawing.Size(71, 24)
+        Me.chb_bit0.TabIndex = 1
+        Me.chb_bit0.Text = "Bit 0"
+        Me.chb_bit0.UseVisualStyleBackColor = True
         '
         'tabCtrl_main
         '
@@ -1113,4 +1182,10 @@ Partial Class form_main
     Friend WithEvents chb_bit1 As CheckBox
     Friend WithEvents chb_bit0 As CheckBox
     Friend WithEvents tabCtrl_main As TabControl
+    Friend WithEvents lb_tab4_runRound As Label
+    Friend WithEvents lb_tab4_runStep As Label
+    Friend WithEvents tbx_tab4_runRound As TextBox
+    Friend WithEvents tbx_tab4_runStep As TextBox
+    Friend WithEvents lb_tab4_stepPerRound As Label
+    Friend WithEvents tbx_tab4_stepPerRound As TextBox
 End Class

@@ -268,11 +268,20 @@ Public Class form_main
 
     'event click run step button
     Private Sub btn_tab4_RunStep_Click(sender As Object, e As EventArgs) Handles btn_tab4_RunStep.Click
-        If btn_tab4_RunStep.Text = "Run Step" Then
+        If lb_step_run.Text = "OFF" Then
             _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_52, &H_31, &H_74}, 0, 6)
             btn_tab4_RunStep.Text = "Stop Step"
         Else
             _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_52, &H_30, &H_74}, 0, 6)
+            btn_tab4_RunStep.Text = "Run Step"
+        End If
+    End Sub
+
+    'event lable text changed
+    Private Sub lb_step_run_TextChanged(sender As Object, e As EventArgs) Handles lb_step_run.TextChanged
+        If lb_step_run.Text = "ON" Then
+            btn_tab4_RunStep.Text = "Stop Step"
+        Else
             btn_tab4_RunStep.Text = "Run Step"
         End If
     End Sub
@@ -310,7 +319,7 @@ Public Class form_main
     'event press enter of text box delay(tab 4)
     Private Sub tbx_tab4_timeStepper_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab4_timeStepper.KeyDown
         If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
-            If Val(tbx_tab4_timeStepper.Text) >= 100 And Val(tbx_tab4_timeStepper.Text) <= 1000 Then
+            If Val(tbx_tab4_timeStepper.Text) >= 25 And Val(tbx_tab4_timeStepper.Text) <= 500 Then
                 Dim tempStepDelay() As Byte = New Byte() {}
                 tempStepDelay = System.Text.Encoding.ASCII.GetBytes(tbx_tab4_timeStepper.Text)
                 _SerialPort.Write(New Byte() {&H_73, &H_53, &H_53, &H_54}, 0, 4)
@@ -330,6 +339,60 @@ Public Class form_main
     'event scroll bar of scroll bar delay(tab 4)
     Private Sub trkbar_timeStepper_Scroll(sender As Object, e As ScrollEventArgs) Handles trkbar_timeStepper.Scroll
         tbx_tab4_timeStepper.Text = trkbar_timeStepper.Value
+    End Sub
+
+    'event press enter of text box set step per round (tab 4)
+    Private Sub tbx_tab4_stepPerRound_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab4_stepPerRound.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            If Val(tbx_tab4_stepPerRound.Text) >= 1 And Val(tbx_tab4_stepPerRound.Text) <= 500 Then
+                Dim tempSPR() As Byte = New Byte() {}
+                tempSPR = System.Text.Encoding.ASCII.GetBytes(tbx_tab4_stepPerRound.Text)
+                _SerialPort.Write(New Byte() {&H_73, &H_53, &H_50, &H_52}, 0, 4)
+                _SerialPort.Write(tempSPR, 0, tempSPR.Count)
+                _SerialPort.Write(New Byte() {&H_74}, 0, 1)
+            End If
+        End If
+
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    'event press enter of text box set stepper run by round (tab 4)
+    Private Sub tbx_tab4_runRound_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab4_runRound.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            If Val(tbx_tab4_runRound.Text) >= 1 And Val(tbx_tab4_runRound.Text) <= 10000 Then
+                Dim temprunRound() As Byte = New Byte() {}
+                temprunRound = System.Text.Encoding.ASCII.GetBytes(tbx_tab4_runRound.Text)
+                _SerialPort.Write(New Byte() {&H_73, &H_53, &H_52, &H_52}, 0, 4)
+                _SerialPort.Write(temprunRound, 0, temprunRound.Count)
+                _SerialPort.Write(New Byte() {&H_74}, 0, 1)
+            End If
+        End If
+
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    'event press enter of text box set stepper run by step (tab 4)
+    Private Sub tbx_tab4_runStep_KeyDown(sender As Object, e As KeyEventArgs) Handles tbx_tab4_runStep.KeyDown
+        If e.KeyCode = Keys.Enter And _SerialPort.IsOpen() = True Then
+            If Val(tbx_tab4_runStep.Text) >= 1 And Val(tbx_tab4_runStep.Text) <= 10000 Then
+                Dim temprunStep() As Byte = New Byte() {}
+                temprunStep = System.Text.Encoding.ASCII.GetBytes(tbx_tab4_runStep.Text)
+                _SerialPort.Write(New Byte() {&H_73, &H_53, &H_52, &H_53}, 0, 4)
+                _SerialPort.Write(temprunStep, 0, temprunStep.Count)
+                _SerialPort.Write(New Byte() {&H_74}, 0, 1)
+            End If
+        End If
+
+        ' supperess "Ting" sound when press enter
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+        End If
     End Sub
 
     'update status line function
